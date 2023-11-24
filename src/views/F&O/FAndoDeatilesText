@@ -1,0 +1,738 @@
+<template>
+  <div class="mt-sm-3 mt-4">
+    <v-row class="">
+      <v-col cols="12" md="9" class="pr-sm-8 pr-0 pl-0 pl-sm-3 ">
+      <v-card elevation="0" rounded-lg outlined style="border: 1px solid #dddddd">
+        <!-- <FINNIFTY 20600 PE START -->
+        <v-card color="#FAFBFF" elevation="0" class="pl-sm-6 pl-8 pr-4 pr-sm-6 mt pb-4 pt-5"> 
+             <v-row>
+                  <v-col cols="7" sm="6">
+                    <p class="MobviewFontSize mb-sm-3 mb-2" style="color: #000;font-size: 20px;font-weight: 559;line-height: 16px;letter-spacing: -0.4px;">FINNIFTY 20600 PE</p>
+                    <div class="d-flex">
+<v-chip  class=" pt-0 mt-0" label x-small style="background-color: white;color: #666666;font-size: 8px;text-transform: uppercase; line-height: 12px;letter-spacing: 0.9px;">
+Refineries
+</v-chip>
+<v-chip label x-small style="background-color: white;color: #666666;font-size: 8px;text-transform: uppercase;line-height: 12px;letter-spacing: 0.9px; "
+   class="ml-2">
+   Large Cap
+  </v-chip>
+                    </div>
+                    </v-col>
+                  <v-col cols="5" sm="6" align="end">
+<div class="d-flex  float-right">
+<div class="mr-2">
+<p class="mb-0 text-right" style="font-weight: 650; font-size: 15px; color: #000000" > ₹ 18,392.60  </p>
+<p class="mb-0" style="font-weight: 600; font-size: 11px; color: #ff1717" > -62.60 (0.34%) </p>  
+</div>
+<v-btn class="ml-4 d-none d-sm-block"  width="25" height="25" fab dark elevation="0" color="#EBEBED" outlined  >
+<v-icon size="15" color="#3E4763"> mdi-bell-outline </v-icon>
+</v-btn>
+              <v-btn class="ml-1 d-none d-sm-block" fab dark width="25" height="25" elevation="0" color="#EBEBED" outlined >
+                <v-icon size="15" color="#3E4763">
+                  mdi-bookmark-outline
+                </v-icon>
+              </v-btn>
+              <v-btn class="d-none d-sm-block" fab dark width="25" height="25" elevation="0" color="#fafbff" outlined >
+                <v-icon size="20" color="#3E4763"> mdi-dots-vertical </v-icon>
+              </v-btn>
+
+</div>
+                  </v-col>
+              </v-row>
+        </v-card>
+         <!-- <FINNIFTY 20600 PE END -->
+          <!-- Spot Price Chart START -->
+        <v-row class="GridReverseAlign">
+          <v-col cols="12" sm="4" >
+                <p class="mb-0 pt-4 pl-5  pb-2 d-sm-block d-none "  style="color: #000;font-size: 16px;font-weight: 559;line-height: 16px; letter-spacing: -0.32px;">Spot Price Chart</p>
+          </v-col>
+              <v-divider class="mt-n1 d-block d-sm-none"></v-divider>
+          <v-col  cols="12" sm="8" class="pr-7">
+            <p class="mb-0 pt-4 pl-7  pb-2 d-sm-none d-block "  style="color: #000;font-size: 16px;font-weight: 559;line-height: 16px; letter-spacing: -0.32px;">Spot Price Chart</p>
+                <div class="float-sm-right  pl-sm-0 pl-5">
+                  <v-tabs
+                    class="align-with-title float-right mb-n2"
+                    background-color="transparent"
+                    color="black" grow
+                  >
+                    <v-tab
+                      class="caption ml-sm-5"
+                      @click="totallinechart((val = '1M'))"
+                    >
+                      <span
+                        style="
+                          font-size: 13px;
+                          font-weight: 650;
+                          line-height: 16px;
+                          letter-spacing: -0.4px;
+                          text-align: left;
+                        "
+                        class="px-0 witttt"
+                        >1M</span
+                      ></v-tab
+                    >
+                    <v-tab
+                      class="caption"
+                      @click="totallinechart((val = '3M'))"
+                      >3M</v-tab
+                    >
+                    <v-tab
+                      class="caption"
+                      @click="totallinechart((val = '6M'))"
+                      >6M</v-tab
+                    >
+                    <v-tab
+                      class="caption"
+                      @click="totallinechart((val = '1YR'))"
+                      >1YR</v-tab
+                    >
+                    <v-tab
+                      class="caption"
+                      @click="totallinechart((val = '3YR'))"
+                      >3YR</v-tab
+                    >
+                    <v-tab
+                      class="caption"
+                      @click="totallinechart((val = '5YR'))"
+                      >5YR</v-tab
+                    >
+                    <v-tab
+                      class="caption"
+                      @click="totallinechart((val = 'MAX'))"
+                      >MAX</v-tab
+                    >
+                  </v-tabs>
+                </div>
+          </v-col>
+        </v-row>
+<v-divider class="mt-sm-2 d-none d-sm-block"></v-divider>
+<!-- Spot Price Chart END -->
+
+                                <!-- TOTAL TRADED VOLUME  START-->
+                                        <div class=" pt-7">
+                                          <div class="pl-sm-6 pr-sm-0 pl-7 pr-7"> 
+                                          <v-row>
+                                           <v-col cols="12" sm="3">
+   <p class="mb-1" style="color: #666;font-size: 10px;font-weight: 469;line-height: 12px; letter-spacing: 0.8px;text-transform: uppercase;">Total Traded Volume</p>
+   <p class="mb-1" style="color: #000;font-size: 14px;font-weight: 469;line-height: 16px;">5,32,88,000</p>
+   <v-divider></v-divider>
+   <v-row class="mt-3"> 
+   <v-col cols="6">
+  <p class="mb-1" style="color: #666;font-size: 10px;font-weight: 469;line-height: 12px; letter-spacing: 0.8px;text-transform: uppercase;">OI</p>
+  <p class="mb-1" style="color: #000;font-size: 14px;font-weight: 469;line-height: 16px;">80,15,650</p>
+  <v-divider></v-divider>
+  </v-col>
+    <v-col cols="6" >
+  <p class="mb-1 text-sm-end" style="color: #666;font-size: 10px;font-weight: 469;line-height: 12px; letter-spacing: 0.8px;text-transform: uppercase;">OI Change%</p>
+  <p class="mb-1 text-sm-end" style="color: #43A833;font-size: 14px;font-weight: 469;line-height: 16px;">+19.89%</p>
+  <v-divider></v-divider>
+  </v-col>
+</v-row>
+<p class="mb-0 pt-4" style="color: #666;font-size: 10px;font-weight: 469;line-height: 12px; letter-spacing: 0.8px;text-transform: uppercase;">High - Low</p>
+<div class="d-flex">
+<p class="mb-0 pt-2" style="color: #000;font-size: 12px;font-weight: 469;line-height: 16px;">₹1,348.95</p>
+<v-slider disabled :ripple="false" class="mb-auto mt-0 pt-0 mb-0" value="50" thumb-color="black" track-color="#D9D9D9" :thumb-size="0" />
+<p class="mb-0 pt-2" style="color: #000;font-size: 12px;font-weight: 469;line-height: 16px;">1,322.65</p>
+</div>
+<v-divider></v-divider>
+<p class="mb-0 pt-4" style="color: #666;font-size: 10px;font-weight: 469;line-height: 12px; letter-spacing: 0.8px;text-transform: uppercase;">52 Weeks High - 52 Weeks Low</p>
+<div class="d-flex">
+<p class="mb-0 pt-2" style="color: #000;font-size: 12px;font-weight: 469;line-height: 16px;">₹1,348.95</p>
+<v-slider disabled :ripple="false" class="mb-auto mt-0 pt-0 mb-0" value="50" thumb-color="black" track-color="#D9D9D9" :thumb-size="0" />
+<p class="mb-0 pt-2" style="color: #000;font-size: 12px;font-weight: 469;line-height: 16px;">1,322.65</p>
+</div> 
+<v-divider class="mb-sm-0 mb-4"></v-divider>
+</v-col>
+</v-row>
+</div>
+<v-divider class="mt-8 d-none d-sm-block"></v-divider>
+
+
+<div class="pt-4 d-none d-sm-block">
+ <v-row >
+    <v-col cols="5">
+      <p class="mb-0 pl-5" style="color: #000;font-size: 20px;font-weight: 559;line-height: 16px;letter-spacing: -0.4px;">Similar Nifty 50 Options</p>
+    </v-col>
+    <v-col class="pr-7" cols="7" align="end">
+       <v-btn text class="text-capitalize" to="StckOptinchain">
+        <p class="mb-0" style="color: #0037B7;font-size: 14px;font-weight: 559;line-height: 16px;">See all Options Chain</p></v-btn>
+       </v-col>
+ </v-row>
+<div>
+<div>
+</div>
+</div>
+</div>
+<div class="FOOverFlowScrollHide d-none d-sm-block">
+<div class="mr-1" style="overflow:scroll">
+<div class="" style="display:inline-flex">
+<v-card class="elevation-0 rounded-lg ml-5 my-5"  width="244px"  v-for="k in 16" :key="k" style="border: 1px solid #CCC;" >
+<v-card class="py-3 elevation-0 pl-4"  color="#FAFBFF">
+<p class="mb-0" style="color: #000;font-size: 14px;font-weight: 559;line-height: 16px;">NIFTY 27 Jul 19700 Put</p>
+</v-card>
+<div class="d-flex px-4 py-2">
+<p class="mb-0"  style="color: #999;font-size: 13px;font-weight: 469;line-height: 16px;">Price</p>
+<p class="mb-0 pl-3" style="color: #000;font-size: 13px;font-weight: 469;line-height: 16px;">₹1,234</p>
+<p class="mb-0 ml-auto" style="color: #999;font-size: 13px;font-weight: 469;line-height: 16px;">Chg%</p>
+<p class="mb-0 pl-3" style="color:#43A833;font-size: 13px;font-weight: 469;line-height: 16px;">+2.2%</p>
+</div>
+<v-divider></v-divider>
+<div class="d-flex px-4 py-2">
+<p class="mb-0"  style="color: #999;font-size: 13px;font-weight: 469;line-height: 16px;">Price</p>
+<p class="mb-0 pl-3" style="color: #000;font-size: 13px;font-weight: 469;line-height: 16px;">₹1,234</p>
+<p class="mb-0 ml-auto" style="color: #999;font-size: 13px;font-weight: 469;line-height: 16px;">Chg%</p>
+<p class="mb-0 pl-3" style="color:#43A833;font-size: 13px;font-weight: 469;line-height: 16px;">+2.2%</p>
+</div>
+</v-card>
+</div>
+</div>
+</div>
+</div>
+      </v-card>
+
+      <v-card class="pt-3 mt-sm-5 px-6 MobborderNone elevation-0" width="100%" rounded-lg  style="border: 1px solid #dddddd">
+        <p class="pt-5 mb-sm-0 mb-5 " style="color: #000;font-size: 20px;font-weight: 559;line-height: 16px;letter-spacing: -0.4px;">Market Depth</p>
+    <div class="d-none d-sm-block">
+             <div class="d-flex pt-7 ">
+                <p class="mb-0" style="color: #666;font-size: 12px;font-weight: 469;line-height: 12px;letter-spacing: 0.96px;"> Buy order Quantity</p>
+                <p class="ml-auto mb-0" style="color: #666;font-size: 12px;font-weight: 469;line-height: 12px;letter-spacing: 0.96px;">Sell order Quantity</p>
+             </div>
+     </div>
+<div class="d-sm-block d-none ">
+    <v-row no-gutters class="pt-2 pb-4">
+      <v-col cols="1" class="pr-0">
+        <p class="mb-0" style="color: #000;font-size: 12px;font-weight: 469;line-height: 16px;"> 60%</p>
+      </v-col>
+      <v-col cols="10" class="pt-2 pl-0 pr-0">
+        <v-card height="4px" class="d-flex elevation-0">
+          <v-card width="60%" color="#DAECE7" class="elevation-0"></v-card>
+          <v-card width="40%" color="#FCDDDC" class="elevation-0"></v-card>
+        </v-card>
+      </v-col>
+      <v-col cols="1" class="pl-0" align="end">
+        <p class="mb-0" style="color: #000;font-size: 14px;font-weight: 469;line-height: 16px;"> 40%</p>
+      </v-col>
+    </v-row>
+  </div>
+    <v-row class="">
+      <v-col cols="5" class="pr-0">
+        <v-card height="20px" class="elevation-0 mb-3">
+          <v-card-actions class="pt-1 pb-1 pa-0 ">
+            <p class="mb-3" style="color: #506D84;font-size: 14px;font-weight: 559;line-height: 100%;">Quantity</p>
+            <v-spacer></v-spacer>
+            <p class="mb-3"
+              style="color: #148564;font-size: 14px;font-weight: 600;line-height: 100%; letter-spacing: 0.14px;">BID
+            </p>
+          </v-card-actions>
+        </v-card>
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">bq1</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0 text-end float-right" style="color: #000;font-size: 13px;font-weight: 500;">bp1
+               </p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="100%"
+            style="position:absolute;left:0;top:0;z-index:1" color="#DAECE7" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">bq2</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0 text-end float-right" style="color: #000;font-size: 13px;font-weight: 500;">
+                bp2</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="40%"
+            style="position:absolute;left:0;top:0;z-index:1" color="#DAECE7" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">bq3</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0 text-end float-right" style="color: #000;font-size: 13px;font-weight: 500;">
+                bp3</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="50%"
+            style="position:absolute;left:0;top:0;z-index:1" color="#DAECE7" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">bq4</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0 text-end float-right" style="color: #000;font-size: 13px;font-weight: 500;">
+                bp4</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="70%"
+            style="position:absolute;left:0;top:0;z-index:1" color="#DAECE7" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">bq5</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0 text-end float-right" style="color: #000;font-size: 13px;font-weight: 500;">
+              bp5 </p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="80%"
+            style="position:absolute;left:0;top:0;z-index:1" color="#DAECE7" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+      </v-col>
+
+      <v-col cols="2" align="center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2" height="210" viewBox="0 0 2 189" fill="none">
+          <path
+            d="M1.70001 1C1.70001 0.613403 1.38661 0.300003 1.00001 0.300003C0.613409 0.300003 0.300008 0.613403 0.300008 1L1.70001 1ZM1.7 189L1.7 187.484L0.3 187.484L0.3 189L1.7 189ZM1.7 184.452L1.7 181.419L0.3 181.419L0.3 184.452L1.7 184.452ZM1.7 178.387L1.7 175.355L0.300001 175.355L0.3 178.387L1.7 178.387ZM1.7 172.323L1.7 169.29L0.300001 169.29L0.300001 172.323L1.7 172.323ZM1.7 166.258L1.7 163.226L0.300001 163.226L0.300001 166.258L1.7 166.258ZM1.7 160.194L1.7 157.161L0.300001 157.161L0.300001 160.194L1.7 160.194ZM1.7 154.129L1.7 151.097L0.300002 151.097L0.300002 154.129L1.7 154.129ZM1.7 148.065L1.7 145.032L0.300002 145.032L0.300002 148.065L1.7 148.065ZM1.7 142L1.7 138.968L0.300002 138.968L0.300002 142L1.7 142ZM1.7 135.935L1.7 132.903L0.300002 132.903L0.300002 135.935L1.7 135.935ZM1.7 129.871L1.7 126.839L0.300003 126.839L0.300003 129.871L1.7 129.871ZM1.7 123.806L1.7 120.774L0.300003 120.774L0.300003 123.806L1.7 123.806ZM1.7 117.742L1.7 114.71L0.300003 114.71L0.300003 117.742L1.7 117.742ZM1.7 111.677L1.7 108.645L0.300004 108.645L0.300003 111.677L1.7 111.677ZM1.7 105.613L1.7 102.581L0.300004 102.581L0.300004 105.613L1.7 105.613ZM1.7 99.5484L1.7 96.5162L0.300004 96.5162L0.300004 99.5484L1.7 99.5484ZM1.7 93.4839L1.7 90.4516L0.300004 90.4516L0.300004 93.4839L1.7 93.4839ZM1.7 87.4194L1.7 84.3871L0.300005 84.3871L0.300004 87.4194L1.7 87.4194ZM1.7 81.3549L1.7 78.3226L0.300005 78.3226L0.300005 81.3549L1.7 81.3549ZM1.7 75.2904L1.70001 72.2581L0.300005 72.2581L0.300005 75.2904L1.7 75.2904ZM1.70001 69.2258L1.70001 66.1936L0.300005 66.1936L0.300005 69.2258L1.70001 69.2258ZM1.70001 63.1613L1.70001 60.1291L0.300006 60.1291L0.300006 63.1613L1.70001 63.1613ZM1.70001 57.0968L1.70001 54.0645L0.300006 54.0645L0.300006 57.0968L1.70001 57.0968ZM1.70001 51.0323L1.70001 48L0.300006 48L0.300006 51.0323L1.70001 51.0323ZM1.70001 44.9678L1.70001 41.9355L0.300006 41.9355L0.300006 44.9678L1.70001 44.9678ZM1.70001 38.9033L1.70001 35.871L0.300007 35.871L0.300007 38.9033L1.70001 38.9033ZM1.70001 32.8387L1.70001 29.8065L0.300007 29.8065L0.300007 32.8387L1.70001 32.8387ZM1.70001 26.7742L1.70001 23.742L0.300007 23.742L0.300007 26.7742L1.70001 26.7742ZM1.70001 20.7097L1.70001 17.6775L0.300008 17.6775L0.300007 20.7097L1.70001 20.7097ZM1.70001 14.6452L1.70001 11.613L0.300008 11.613L0.300008 14.6452L1.70001 14.6452ZM1.70001 8.5807L1.70001 5.54843L0.300008 5.54843L0.300008 8.5807L1.70001 8.5807ZM1.70001 2.51617L1.70001 1L0.300008 1L0.300008 2.51617L1.70001 2.51617Z"
+            fill="#D9DBDC" />
+        </svg>
+      </v-col>
+      <v-col cols="5" class=" pl-0">
+        <v-card height="20px" class="elevation-0 mb-3">
+          <v-card-actions class="pt-1 pb-1 pa-0 ">
+            <p class="mb-3"
+              style="color: #D34645;font-size: 14px;font-weight: 600;line-height: 100%; letter-spacing: 0.14px;">Ask
+            </p>
+            <v-spacer></v-spacer>
+            <p class="mb-3" style="color: #506D84;font-size: 14px;font-weight: 559;line-height: 100%;">Quantity</p>
+          </v-card-actions>
+        </v-card>
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #000;font-size: 13px;font-weight: 500;">sq1</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">sp1</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="70%"
+            style="position:absolute;right:0;top:0;z-index:1" color="#FCDDDC" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #000;font-size: 13px;font-weight: 500;">sq2</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">sp2</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="100%"
+            style="position:absolute;right:0;top:0;z-index:1" color="#FCDDDC" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #000;font-size: 13px;font-weight: 500;">sq3</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">sp3</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="90%"
+            style="position:absolute;right:0;top:0;z-index:1" color="#FCDDDC" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #000;font-size: 13px;font-weight: 500;">ssq4</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">sp4</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="80%"
+            style="position:absolute;right:0;top:0;z-index:1" color="#FCDDDC" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+        <div class="" style="position:relative">
+          <v-card color="transparent" style="z-index:2" class="elevation-0  mb-4 ">
+            <v-card-actions class="pa-0 px-1">
+              <p class="mb-0" style="color: #000;font-size: 13px;font-weight: 500;">sq5</p>
+              <v-spacer></v-spacer>
+              <p class="mb-0" style="color: #515559;font-size: 13px;font-weight: 500;">sp5</p>
+            </v-card-actions>
+          </v-card>
+          <v-card width="90%"
+            style="position:absolute;right:0;top:0;z-index:1" color="#FCDDDC" class="elevation-0" height="20px">
+          </v-card>
+        </div>
+
+      </v-col>
+    </v-row>
+    <div class="d-sm-none d-block">
+    <v-row class="">
+        <v-col cols="6">  
+          <p class="mb-2" style="color: #666;font-size: 12px;font-weight: 469;line-height: 12px;letter-spacing: 0.96px;text-transform: uppercase;">Buy Qty.</p>
+          <p class="mb-1" style="color: #000;font-size: 14px;font-weight: 469;line-height: 16px;">65.45%</p>
+        </v-col>
+        <v-col cols="6" class="" align="end">
+          <p class="mb-2 " style="color: #666;font-size: 12px;font-weight: 469;line-height: 12px;letter-spacing: 0.96px;text-transform: uppercase;">Buy Qty.</p>
+          <p class="mb-1" style="color: #000;font-size: 14px;font-weight: 469;line-height: 16px;">65.45%</p>   
+        </v-col>
+      </v-row>
+      <div class="d-flex mt-2">
+        <v-card class="elevation-0" width="60%" height="5px" color="#148564"></v-card>
+        <v-card class="elevation-0" width="60%" height="5px" color="#D34645"></v-card>
+
+      </div>
+    </div>
+      </v-card>
+      </v-col>
+
+      <v-col cols="12" md="3" class="">
+        <div class="">
+          <v-card class="d-none d-sm-block" outlined rounded-lg elevation="0"  style="border: 1px solid #dddddd" >
+            <v-card elevation="0" class="pl-lg-4 pr-lg-4 pt-4 pb-lg-4 pl-2 pr-1" style="background-color: #fafbff" >
+            <v-btn elevation="0" small  height="32px" style="background-color: #43a833; color: white; width: 47%" rounded class="">buy
+              </v-btn>
+            <v-btn rounded elevation="0" class="ml-lg-3 ml-2" small height="32px" style="background-color: #ffffff;color: #666666;border: 1px solid #c2c2c2; width:47%;"  >SELL
+              </v-btn>
+          </v-card>
+
+            <div class="me-auto">
+              <v-tabs
+                v-model="tab"
+                background-color="transparent"
+                color="black"
+              >
+                <v-tab class="text-capitalize px-0 ml-4"
+                  ><span
+                    style="
+                      font-size: 13px;
+                      font-weight: 650;
+                      line-height: 16px;
+                      letter-spacing: -0.4px;
+                      text-align: left;
+                    "
+                    class="px-0"
+                    >Regular</span
+                  >
+                </v-tab>
+                <v-tab class="text-capitalize px-0 ml-3"
+                  ><span
+                    style="
+                      font-size: 13px;
+                      font-weight: 650;
+                      line-height: 16px;
+                      letter-spacing: -0.4px;
+                      text-align: left;
+                      font-variation-settings: 'slnt' 0;
+                    "
+                  >
+                    Cover</span
+                  ></v-tab
+                >
+                <v-tab class="text-capitalize px-0 ml-3"
+                  ><span
+                    style="
+                      font-size: 13px;
+                      font-weight: 650;
+                      line-height: 16px;
+                      letter-spacing: -0.4px;
+                      text-align: left;
+                      font-variation-settings: 'slnt' 0;
+                    "
+                    >AMO</span
+                  ></v-tab
+                >
+              </v-tabs>
+            </div>
+            <v-divider></v-divider>
+            <div class="pa-3">
+              <p class="mb-0 sideheaq">Investment type</p>
+              <div class="mt-2">
+                <input
+                  type="radio"
+                  class="pt-2"
+                  checked
+                  id="html"
+                  name="fav_language"
+                  value="Delivery"
+                />
+                <label for="html" class="ml-1 sidehea">Delivery</label>
+                <input
+                  type="radio"
+                  id="css"
+                  class="ml-4"
+                  name="fav_language"
+                  value="CSS"
+                />
+                <label for="css" class="ml-1 sidehea">Intraday</label>
+              </div>
+              <v-row class="mt-4">
+                <v-col cols="6" class="mt-0 pt-0">
+                  <p class="mb-0 sidetext">Quantity</p>
+                  <v-card
+                    class="rounded-pill pa-2 mt-2"
+                    elevation="0"
+                    style="background-color: #f1f3f8"
+                  >
+                    <div class="d-flex">
+                      <v-btn
+                        elevation="0"
+                        small
+                        outlined
+                        style="
+                          background-color: white;
+                          width: 20px;
+                          height: 20px;
+                        "
+                        fab
+                        dark
+                        x-small
+                      >
+                        <v-icon size="16" color="#666666"> mdi-minus </v-icon>
+                      </v-btn>
+                      <p class="mb-0 mx-auto sidetext">43</p>
+                      <v-btn
+                        small
+                        elevation="0"
+                        outlined
+                        style="
+                          background-color: white;
+                          width: 20px;
+                          height: 20px;
+                        "
+                        fab
+                        dark
+                        x-small
+                      >
+                        <v-icon size="16" color="#666666"> mdi-plus </v-icon>
+                      </v-btn>
+                    </div>
+                  </v-card>
+                </v-col>
+                <v-col cols="6" class="mt-0 pt-0 ml-0 pl-0">
+                  <p class="mb-0 sidetext">Price</p>
+                  <v-card
+                    class="rounded-pill pa-2 mt-2"
+                    small
+                    elevation="0"
+                    style="background-color: #f1f3f8"
+                  >
+                    <div class="d-flex">
+                      <p class="mb-0 pl-1 pt-1 sidetext">₹ 43123</p>
+                    </div>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <v-divider class="mt-5"></v-divider>
+              <p class="mb-0 mt-4 sideheaq">Investment type</p>
+              <v-chip-group
+                show-arrows
+                active-class="newchi"
+                class="ma-0 ml-0 pa-0"
+              >
+                <v-chip
+                  small
+                  class="pa- custom-chip"
+                  style="
+                    font-size: 12px;
+                    color: #666666;
+                    background-color: #f1f3f8;
+                    line-height: 16px;
+                  "
+                  >Market</v-chip
+                >
+                <v-chip
+                  small
+                  class="pa- sidechipp"
+                  style="
+                    font-size: 12px;
+                    color: #666666;
+                    background-color: #f1f3f8;
+                    line-height: 16px;
+                  "
+                  >Limit</v-chip
+                >
+                <v-chip
+                  small
+                  class="pa- sidechipp"
+                  style="
+                    font-size: 12px;
+                    color: #ffffff;
+                    background-color: #000000;
+                  "
+                  >SL Limit</v-chip
+                >
+                <v-chip
+                  small
+                  class="pa- sidechipp"
+                  style="
+                    font-size: 12px;
+                    color: #666666;
+                    background-color: #f1f3f8;
+                  "
+                  >SL Mkt</v-chip
+                >
+              </v-chip-group>
+              <p
+                class="mb-0 mt-3"
+                style="font-size: 14px; font-weight: 620; color: black"
+              >
+                Trigger price
+              </p>
+              <v-card
+                class="rounded-pill pa-2 mt-2"
+                x-small
+                elevation="0"
+                style="background-color: #f1f3f8"
+              >
+                <p class="mb-0 ml-2 sidehea" style="color: #666666">
+                  ₹
+                  <span class="mb-0" style="color: black; font-size: 13px"
+                    >1,288.90
+                  </span>
+                </p>
+              </v-card>
+              <p class="mb-0 mt-3" style="color: #666666; font-size: 10px">
+                Your order wil executed after a stock crosses this trigger
+                price set for you
+              </p>
+              <p
+                class="mb-0 mt-4"
+                style="
+                  text-align: center;
+                  color: #43a833;
+                  font-size: 19px;
+                  font-weight: 469;
+                "
+              >
+                ₹ 10,31,566
+              </p>
+              <!-- <p -card> -->
+              <p
+                class="mb-0"
+                style="color: #666666; font-size: 10px; text-align: center"
+              >
+                Required amount to buy 34 stocks
+              </p>
+              <v-btn
+                block
+                elevation="0"
+                class="mt-5"
+                rounded
+                style="
+                  background-color: black;
+                  color: white;
+                  font-size: 12px;
+                  text-transform: capitalize;
+                "
+                >Start Investing Now!
+              </v-btn>
+            </div>
+          </v-card>
+          <v-toolbar class="mt- toolbar-contant pl-sm-0 pl-4 d-block d-sm-none" elevation="0" color="white">
+                <v-toolbar-title class="" style="color: #000000;font-size:16px;font-weight: 559;line-height: 16px;">Nifty 50 in news</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-menu left offset-y>
+                    <template v-slot:activator="{ on, attrs }">
+
+                        <v-btn v-bind="attrs" v-on="on" :ripple="false" class="d-none d-sm-block buttoncontant pr-1" plain icon>
+                            <v-icon class="" color="black">mdi-dots-vertical</v-icon>
+                        </v-btn>
+                    </template>
+                    <v-list>
+                        <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
+            </v-toolbar>
+            <v-card class="elevation-0 mb-6 ml-sm-0 ml-4 d-block d-sm-none" v-for="stocknews in FAndONews" :key="stocknews.title">
+                <v-card class="  mt-2 elevation-0">
+                    <div class="borderlines">
+                    <p class="pl-3 mb-1" style="font-size:14px;color: #000000;font-weight: 469;line-height: 18px;letter-spacing: -0.5px;">{{ stocknews.title
+                    }}
+                    </p>
+                    <p class="pl-3 mb-2" style="font-size:10px;color:#999999;font-weight:469;line-height:12px">22 May, 2023</p></div>
+                </v-card>
+              
+            </v-card>
+            <div class="text-center mb-15 mb-sm-0 d-block d-sm-none" >
+                <v-btn class=" block text-none mx-auto" justify-center text @click="readmore()">
+                     <img class="d-none d-sm-block"
+                            :src="require('@/assets/FAndoImgs/readnews.svg')" width="14px" height="14px" /> <p class="pl-1 mb-0" style="color: #0037B7;font-size:14px;font-weight:559">Read other news </p>
+                </v-btn>
+            </div>
+        </div>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+<script>
+export default {
+data() {
+  return {
+    MobbottomFODeatisPage:true,
+    FAndONews: [
+            {
+                title: "INR Strengthens Against USD, Dollar Index Slides; March USD/INR Levels?",
+                subtitle: "22 May, 2023",
+            },
+            {
+                title: "HDFC’s exit from corporate bond market brings cheer to smaller issuers",
+                subtitle: "22 May, 2023",
+            },
+            {
+                title: "Bank bond issuance may fall to Rs 90,000 crore in FY24, says ICRA",
+                subtitle: "22 May, 2023",
+            },
+            {
+                title: "Corporate bond issuances nosedive in April on low requirement of funds",
+                subtitle: "22 May, 2023",
+            },
+            {
+                title: "Are corporate green bonds losing sheen? Issuances halve since 2022 due",
+                subtitle: "22 May, 2023",
+            },
+            {
+                title: "3 Stocks to Buy Now That Are Yielding 3.5% to 8.8%",
+                subtitle: "22 May, 2023",
+            },
+
+        ],
+  };
+},
+};
+</script>
+<style lang="scss">
+@media only screen and (max-width: 600px) {
+.MobborderNone {
+border: none !important;
+}
+.MobviewFontSize {
+font-size: 16px !important;
+}
+.GridReverseAlign {
+display: flex;
+flex-flow: column-reverse;  
+}
+}
+.FOOverFlowScrollHide {
+::-webkit-scrollbar {
+    display: none !important;
+}
+}
+</style>

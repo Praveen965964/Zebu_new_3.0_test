@@ -1,0 +1,2202 @@
+<template>
+    <div id="app">
+        <v-row class="" v-if="home">
+            <v-col cols="9" class="pt-0 pr-8">
+                <v-card class="rounded-lg elevation-0 mt-4 " style="overflow: visible;" color="#51FFB6"  height="224px">
+                    <div class="pl-8 pt-5 ">
+                        <v-row class="">
+                            <v-col cols="4" align="start">
+                                <p class=" display-1 mt-3" style="color:#000000;line-height:31px;letter-spacing: 2px;font-weight:559">Simple.<br>
+                                    Insightful. <br>Incremental.</p>
+                                <!-- <v-btn class="font-weight-light text-none rounded-pill mt-3"   :ripple="false" height="36px"
+                                    style="font-size: 14px !important;background-color: #000000;">
+                                    <span class="text-capitalize text-none" style="color:#FFFFFF;">Get free account</span>
+                                </v-btn> -->
+
+                                <v-btn color="#2A2A2A" height="34px" class="mt-3 text-none rounded-pill elevation-0"><span
+                    class=" font-weight-light body-2"    style="color:#FFFFFF;">Get free account</span></v-btn>
+
+                            </v-col>
+
+
+                                              <v-col class=" pl-0 " cols="8">
+                                                <div class="display-flex row pt-4">
+                                                    <v-card class="pt-4 pl-3 pr-4  "
+                                    style="z-index: 1;border-radius: 16px;width: 172px;height:215px; box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04); ">
+
+                                    <img class="" :src="require('@/assets/zebu-stocks/back-office-stocks.svg')" width="100%" height="130px" />
+                                 
+                                  <v-card-actions>  
+                                  <p class="text-start font-weight-bold  mb-0 pt-2"
+                                        style="font-size: 16px;color: #000000;line-height:18px">Buy
+                                        stocks <br>with a click.</p></v-card-actions>
+                                </v-card> 
+                                <v-card class="pl-4 pr-4 pt-3 pb-3 ml-4"
+                                    style="z-index: 1;border-radius: 16px;width: 172px;height:215px; box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04);">
+                                    <img class="" :src="require('@/assets/zebu-stocks/investsafe.svg')" width="100%"  height="120px"/>
+                                    <p class="text-start font-weight-bold pt-3 mb-0"
+                                        style="font-size: 16px;color: #000000;line-height:18px">Invest
+                                        safely in <br>Government
+                                        & <br> Gold bonds</p>
+                                </v-card>
+                                <v-card class="pl-2 pr-2 pt-4 pb-3 ml-4"
+                                    style="z-index: 1;border-radius: 16px;width: 172px; height:215px; box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04);">
+
+                                    <img class="" :src="require('@/assets/zebu-stocks/findipos.svg')" width="100%" height="110px" />
+                                    <p class="font-weight-bold mb-0 pt-4 pl-2" style="font-size: 16px;color: #000000;line-height:18px">
+                                        Find early<br>winners with <br>IPOs</p>
+                                </v-card>
+
+                                                </div>
+                                                   
+        
+        </v-col>
+
+                            <!-- <v-col class=" pl-1" align="right" cols="3">
+                                <v-card class="pt-4 pl-3 pr-4 mt-1 "
+                                    style="z-index: 1;border-radius: 16px;width: 181px;height:219px; box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04); ">
+
+                                    <img class="" :src="require('@/assets/zebu-stocks/back-office-stocks.svg')" width="100%" height="130px" />
+                                 
+                                  <v-card-actions>  
+                                  <p class="text-start font-weight-bold  mb-0 pt-2"
+                                        style="font-size: 16px;color: #000000;line-height:18px">Buy
+                                        stocks <br>with a click.</p></v-card-actions>
+                                </v-card> 
+                            </v-col>
+                            <v-col class="elevation-0" align="center" cols="3">
+                                <v-card class="pl-4 pr-4 pt-3 pb-3 mt-1"
+                                    style="z-index: 1;border-radius: 16px;width: 181px;height:219px; box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04);">
+                                    <img class="" :src="require('@/assets/zebu-stocks/investsafe.svg')" width="100%"  height="120px"/>
+                                    <p class="text-start font-weight-bold pt-3 mb-0"
+                                        style="font-size: 16px;color: #000000;line-height:18px">Invest
+                                        safely in <br>Government
+                                        & <br> Gold bonds</p>
+                                </v-card>
+                            </v-col>
+                            <v-col class="elevation-0" cols="3">
+                                <v-card class="pl-2 pr-2 pt-4 pb-3 mt-1"
+                                    style="z-index: 1;border-radius: 16px;width: 181px; height:219px; box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04);">
+
+                                    <img class="" :src="require('@/assets/zebu-stocks/findipos.svg')" width="100%" height="110px" />
+                                    <p class="font-weight-bold mb-0 pt-4 pl-2" style="font-size: 16px;color: #000000;line-height:18px">
+                                        Find early<br>winners with <br>IPOs</p>
+                                </v-card>
+                            </v-col> -->
+                        </v-row>
+                    </div>
+                </v-card>
+                <v-toolbar class="mt-5 pt-0 pb-0 toolbar-contant" elevation="0" color="white"
+                    style="background-color: transparent;" height="20px">
+                    <v-toolbar-title class="font-weight-bold" style="font-size:20px">Top indices</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-menu left offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-btn v-bind="attrs" v-on="on" plain :ripple="false" class="buttoncontant" icon>
+                                <v-icon color="black">mdi-dots-vertical</v-icon>
+                            </v-btn>
+                            <!-- <v-btn color="#0037B7" :ripple="false" id="no-background-hover"
+                                class="body-2 font-weight-bold text-capitalize" @click="indicesPage()" text dense>See all
+                                indexes
+                            </v-btn> -->
+                        </template>
+                        <v-list>
+                            <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                </v-toolbar>
+                <div class="mt-2 display-flex row ">
+                    <v-card v-for="(item, index) in itemsss" :key="index" @click="SingleIndexpage(index)" elevation="0"
+                        outlined height="89px" width="134px" class="pa-2 ml-3 mr-1">
+                        <p class="font-weight-bold mb-1" style="font-size:14px;font-size: 14px; color: #000000;">{{
+                            item.idxname }}</p>
+                        <v-divider color="#000000" width="24px"></v-divider>
+                        <p class="mb-0 pt-2" style="color:#666666;font-size: 12px;">₹{{ item.lp }}</p>
+                        <p class="" :class="getTextColorClass(item.change)" style="font-size: 12px;">{{ item.ch }}
+                            <span>({{ item.change }}%)</span>
+                        </p>
+                    </v-card>
+                    <v-row v-if="itemsss == ''" class="elevation-0 ">
+                        <v-col cols="12" class="font-weight-medium mb-7 mt-10 text-center"
+                            style="font-size:14px; color: #d6d6d6;">No data available</v-col>
+                    </v-row>
+                </div>
+                <p class="fontl-weight-bold mt-8 " style="color:#000000;font-size: 20px;">Today’s trade action
+                </p>
+                <v-card class="rounded-lg elevation-0 mt-5 scrollcustamize" color="#F1F3F8" height="64px" width="100%">
+                    <v-row nogutters>
+                        <v-col cols="3">
+                            <p class="pl-6 " style="font-size:15px ;letter-spacing: -0.5px; color: #000000;font-weight:561">
+                                Advance/<br>Decline Ratio</p>
+
+                        </v-col>
+                        <v-col class="" cols="9">
+                            <div class="display-flex row py-1" >
+<v-card class="elevation-0 rounded-lg" style="margin-top:2px"  height="52px" width="316px">
+    <v-row>
+    <v-col cols="3" class="">
+        <p class="mb-0 font-weight-bold mt-2 pl-3"
+            style="font-size: 14px;color:#000000">
+            Stocks</p>
+        <p class="mb-0 font-weight-medium pl-3"
+            style="font-size: 15px;color:#666666"> {{ this.totalvaluestore }}
+        </p>
+    </v-col>
+    <v-col  class="" cols="9">
+
+       
+        <v-card  class="elevation-0  display-flex row " width="100%">
+           
+
+            <v-tooltip color="black" bottom>
+                <template v-slot:activator="{ on, attrs }">
+
+
+<v-card color="red" height="30px"></v-card>
+
+
+                    <v-card v-bind="attrs" v-on="on" class="elevation-0"
+                        :width="`${100 * (valuestore.Positive / totalvaluestore)}%`"
+                        height="8px" color="#43A833">
+                    </v-card>
+                    </template>
+                <span>Positive: {{ (100 * (valuestore.Positive / totalvaluestore)).toFixed()
+                }}%</span>
+            </v-tooltip>
+            <v-tooltip color="black" bottom>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                        :width="`${100 * (valuestore.Neutral / totalvaluestore)}%`"
+                        height="8px" color="#D9D9D9"></v-card>
+                </template>
+                <span>Neutral: {{ (100 * (valuestore.Neutral / totalvaluestore)).toFixed()
+                }}%</span>
+            </v-tooltip>
+
+            <v-tooltip color="black" bottom>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                        :width="`${100 * (valuestore.Negative / totalvaluestore)}%`"
+                        height="8px" color="#FF1717"></v-card>
+                </template>
+                <span>Negative: {{ (100 * (valuestore.Negative / totalvaluestore)).toFixed()
+                }}%</span>
+            </v-tooltip>
+            <v-row class="pt-4">
+                <v-col class="pa-0" cols="6">
+                    <div class="text-start">
+                        <img alt="" class="shrink "
+                            :src="require('@/assets/zebu-stocks/arrowgreen.svg')"
+                            width="10px" height="10px" /><span
+                            class="ml-1 font-weight-medium text-end"
+                            style="font-size:12px;color:#666666">{{ this.valuestore.Positive
+                            }}</span>
+                    </div>
+                </v-col>
+                <v-col class="pa-0 pr-8" cols="6" align="end">
+                    <img alt="" class="shrink "
+                        :src="require('@/assets/zebu-stocks/redarrow.svg')" width="10px"
+                        height="10px" /> <span class="font-weight-medium"
+                        style="font-size:12px;color:#666666">{{ this.valuestore.Negative
+                        }}</span>
+                </v-col>
+            </v-row>
+        </v-card>
+    </v-col>
+</v-row>
+</v-card>
+<v-card class="ml-3 elevation-0"  height="52px" width="316px"></v-card>  
+   </div>                   
+                            <!-- <v-card class=" p rounded-lg elevation-0" height="52px" width="337px">
+
+
+<v-row>
+    <v-col cols="3" class="pa-0">
+        <p class="mb-0 font-weight-bold mt-5 text-center pl-2"
+            style="font-size: 14px;color:#000000">
+            Stocks</p>
+        <p class="mb-0 font-weight-medium text-center "
+            style="font-size: 15px;color:#666666"> {{ this.totalvaluestore }}
+        </p>
+    </v-col>
+
+    <v-col v-if="this.valuestore == ''" cols="9"
+        class="font-weight-medium mb-7 mt-4 text-center"
+        style="font-size:14px;font-size: 14px; color: #d6d6d6;">No data available
+    </v-col>
+    <v-col v-else class="" cols="9">
+        <v-card class="elevation-0  display-flex row mt-4 pl-6" width="100%">
+
+
+            <v-tooltip color="black" bottom>
+                <template v-slot:activator="{ on, attrs }">
+
+
+
+
+
+                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-n5"
+                        :width="`${100 * (valuestore.Positive / totalvaluestore)}%`"
+                        height="8px" color="#43A833">
+                    </v-card></template>
+                <span>Positive: {{ (100 * (valuestore.Positive / totalvaluestore)).toFixed()
+                }}%</span>
+            </v-tooltip>
+            <v-tooltip color="black" bottom>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                        :width="`${100 * (valuestore.Neutral / totalvaluestore)}%`"
+                        height="8px" color="#D9D9D9"></v-card>
+                </template>
+                <span>Neutral: {{ (100 * (valuestore.Neutral / totalvaluestore)).toFixed()
+                }}%</span>
+            </v-tooltip>
+
+            <v-tooltip color="black" bottom>
+                <template v-slot:activator="{ on, attrs }">
+                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                        :width="`${100 * (valuestore.Negative / totalvaluestore)}%`"
+                        height="8px" color="#FF1717"></v-card>
+                </template>
+                <span>Negative: {{ (100 * (valuestore.Negative / totalvaluestore)).toFixed()
+                }}%</span>
+            </v-tooltip>
+            <v-row class="pt-4">
+                <v-col class="pa-0" cols="6">
+                    <div class="text-start">
+                        <img alt="" class="shrink "
+                            :src="require('@/assets/zebu-stocks/arrowgreen.svg')"
+                            width="10px" height="10px" /><span
+                            class="ml-1 font-weight-medium text-end"
+                            style="font-size:12px;color:#666666">{{ this.valuestore.Positive
+                            }}</span>
+                    </div>
+                </v-col>
+                <v-col class="pa-0 pr-8" cols="6" align="end">
+                    <img alt="" class="shrink "
+                        :src="require('@/assets/zebu-stocks/redarrow.svg')" width="10px"
+                        height="10px" /> <span class="font-weight-medium"
+                        style="font-size:12px;color:#666666">{{ this.valuestore.Negative
+                        }}</span>
+                </v-col>
+            </v-row>
+        </v-card>
+    </v-col>
+
+</v-row>
+
+
+</v-card> -->
+                        </v-col>
+
+
+                        <!-- <v-col class="pa-0 py-2 " cols="5" align="end">
+                            <v-card class="float-right  p rounded-lg elevation-0" height="56px" width="337px">
+
+
+                                <v-row>
+                                    <v-col cols="3" class="pa-0">
+                                        <p class="mb-0 font-weight-bold mt-5 text-center pl-2"
+                                            style="font-size: 14px;color:#000000">
+                                            Stocks</p>
+                                        <p class="mb-0 font-weight-medium text-center "
+                                            style="font-size: 15px;color:#666666"> {{ this.totalvaluestore }}
+                                        </p>
+                                    </v-col>
+
+                                    <v-col v-if="this.valuestore == ''" cols="9"
+                                        class="font-weight-medium mb-7 mt-4 text-center"
+                                        style="font-size:14px;font-size: 14px; color: #d6d6d6;">No data available
+                                    </v-col>
+                                    <v-col v-else class="" cols="9">
+                                        <v-card class="elevation-0  display-flex row mt-4 pl-6" width="100%">
+
+
+                                            <v-tooltip color="black" bottom>
+                                                <template v-slot:activator="{ on, attrs }">
+
+
+
+
+
+                                                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-n5"
+                                                        :width="`${100 * (valuestore.Positive / totalvaluestore)}%`"
+                                                        height="8px" color="#43A833">
+                                                    </v-card></template>
+                                                <span>Positive: {{ (100 * (valuestore.Positive / totalvaluestore)).toFixed()
+                                                }}%</span>
+                                            </v-tooltip>
+                                            <v-tooltip color="black" bottom>
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                                                        :width="`${100 * (valuestore.Neutral / totalvaluestore)}%`"
+                                                        height="8px" color="#D9D9D9"></v-card>
+                                                </template>
+                                                <span>Neutral: {{ (100 * (valuestore.Neutral / totalvaluestore)).toFixed()
+                                                }}%</span>
+                                            </v-tooltip>
+
+                                            <v-tooltip color="black" bottom>
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                                                        :width="`${100 * (valuestore.Negative / totalvaluestore)}%`"
+                                                        height="8px" color="#FF1717"></v-card>
+                                                </template>
+                                                <span>Negative: {{ (100 * (valuestore.Negative / totalvaluestore)).toFixed()
+                                                }}%</span>
+                                            </v-tooltip>
+                                            <v-row class="pt-4">
+                                                <v-col class="pa-0" cols="6">
+                                                    <div class="text-start">
+                                                        <img alt="" class="shrink "
+                                                            :src="require('@/assets/zebu-stocks/arrowgreen.svg')"
+                                                            width="10px" height="10px" /><span
+                                                            class="ml-1 font-weight-medium text-end"
+                                                            style="font-size:12px;color:#666666">{{ this.valuestore.Positive
+                                                            }}</span>
+                                                    </div>
+                                                </v-col>
+                                                <v-col class="pa-0 pr-8" cols="6" align="end">
+                                                    <img alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/redarrow.svg')" width="10px"
+                                                        height="10px" /> <span class="font-weight-medium"
+                                                        style="font-size:12px;color:#666666">{{ this.valuestore.Negative
+                                                        }}</span>
+                                                </v-col>
+                                            </v-row>
+                                        </v-card>
+                                    </v-col>
+
+                                </v-row>
+
+
+                            </v-card>
+
+                        </v-col> -->
+
+
+                        <!-- <v-col class=" py-2 " height="190px" cols="5">
+                            <v-card v-if="clientids == ''" class="float-right mb-1 pb-1  mr-2 rounded-lg elevation-0"
+                                height="56px" width="337px">
+                                <v-row>
+                                    <v-col cols="3">
+                                        <p class="mb-0 font-weight-bold mt-2 pl-4" style="font-size: 14px;color:#000000">
+                                            Sector</p>
+                                    </v-col>
+                                    <v-col cols="9">
+                                        <p class="font-weight-medium mb-7 mt-4 text-center"
+                                            style="font-size:14px;font-size: 14px; color: #d6d6d6;">No data available</p>
+                                    </v-col>
+                                </v-row>
+
+                            </v-card>
+
+                            <v-carousel v-else vertical interval="6500" height="60px" cycle :show-arrows="false"
+                                hide-delimiters hide-delimiter-background>
+                               
+                                <v-carousel-item v-for="sectorvalue in clientids" :key="sectorvalue">
+                                    <v-card class="float-right mb-1 pb-1  mr-2 rounded-lg elevation-0" height="56px"
+                                        width="337px">
+
+
+                                        <v-row class="">
+                                            <v-col cols="3" class="pa-0">
+                                                <v-tooltip color="black" top>
+                                                    <template v-slot:activator="{ on, attrs }">
+                                                        <p v-bind="attrs" v-on="on" class="mb-0 font-weight-bold mt-4 pl-6"
+                                                            style="font-size: 14px;color:#000000">
+                                                            Sector<span class="mdi mdi-information-variant "
+                                                                style="font-size:17px"></span></p>
+                                                    </template>
+                                                    <span class="font-weight-medium"
+                                                        style="font-size: 14px;color:#FFFFFF">Sector : {{
+                                                            sectorvalue.Sector }}</span>
+                                                </v-tooltip>
+                                                <p class="mb-0 font-weight-medium pl-7 "
+                                                    style="font-size: 15px;color:#666666">
+
+                                                    {{ sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral }}
+                                                </p>
+                                            </v-col>
+                                            <v-col class="pl-1 " cols="9">
+                                                <v-card class="elevation-0  display-flex row mt-4 pl-7" width="100%">
+
+
+
+
+                                                    <v-tooltip color="black" bottom>
+                                                        <template v-slot:activator="{ on, attrs }">
+                                                            <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-n5"
+                                                                :width="`${100 * (sectorvalue.Positive / (sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral))}%`"
+                                                                height="8px" color="#43A833">
+
+                                                            </v-card></template>
+                                                        <span class="font-weight-medium"
+                                                            style="font-size: 14px;color:#FFFFFF">Positive : {{
+                                                                (100 * (sectorvalue.Positive / (sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral))).toFixed() }}%</span>
+                                                    </v-tooltip>
+
+                                                    <v-tooltip color="black" bottom>
+                                                        <template v-slot:activator="{ on, attrs }">
+
+                                                            <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                                                                :width="`${100 * (sectorvalue.Neutral / (sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral))}%`"
+                                                                height="8px" color="#D9D9D9">
+                                                            </v-card></template>
+                                                        <span class="font-weight-medium"
+                                                            style="font-size: 14px;color:#FFFFFF">Neutral : {{
+                                                                (100 * (sectorvalue.Neutral / (sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral))).toFixed() }}%</span>
+                                                    </v-tooltip>
+
+                                                    <v-tooltip color="black" bottom>
+                                                        <template v-slot:activator="{ on, attrs }">
+
+                                                            <v-card v-bind="attrs" v-on="on" class="elevation-0 ml-1"
+                                                                :width="`${100 * (sectorvalue.Negative / (sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral))}%`"
+                                                                height="8px" color="#FF1717"></v-card>
+                                                        </template>
+                                                        <span class="font-weight-medium"
+                                                            style="font-size: 14px;color:#FFFFFF">Negative : {{
+                                                                (100 * (sectorvalue.Negative / (sectorvalue.Negative + sectorvalue.Positive + sectorvalue.Neutral))).toFixed() }}%</span>
+                                                    </v-tooltip>
+
+
+                                                    <v-row class="pt-4">
+                                                        <v-col class="pt-0 pb-0 pr-0" cols="6">
+                                                            <div class="text-start">
+                                                                <img alt="" class="shrink  ml-n4"
+                                                                    :src="require('@/assets/zebu-stocks/arrowgreen.svg')"
+                                                                    width="10px" height="10px" /><span
+                                                                    class="ml-1 font-weight-medium text-start"
+                                                                    style="font-size:12px;color:#666666">{{ sectorvalue.Positive }}</span>
+                                                            </div>
+                                                        </v-col>
+                                                        <v-col class="pa-0 pr-6" cols="6" align="end">
+                                                            <img alt="" class="shrink "
+                                                                :src="require('@/assets/zebu-stocks/redarrow.svg')"
+                                                                width="10px" height="10px" /> <span
+                                                                class="font-weight-medium text-end"
+                                                                style="font-size:12px;color:#666666">{{ sectorvalue.Negative }}</span>
+                                                        </v-col>
+                                                    </v-row>
+                                                </v-card>
+                                            </v-col>
+                                        </v-row>
+
+
+                                    </v-card>
+                                </v-carousel-item>
+                            </v-carousel>
+                            
+
+                        </v-col> -->
+                    </v-row>
+                </v-card>
+                <v-tabs background-color="transparent" class="mt-5" color="black" v-model="tabtopgainer">
+                    <v-tab v-for="tabss in TradeActionTab" :key="tabss" class="text-capitalize font-weight-"
+                        style="font-size: 15px;"><span class="font-weight-bold">{{ tabss }} </span> </v-tab>
+                </v-tabs>
+                <v-tabs-items v-model="tabtopgainer">
+                    <!-- table-1 -->
+                    <v-tab-item>
+                        <v-data-table hide-default-header :headers="headers" :items="gainer" :items-per-page="ggggggggggg"
+                            item-key="id" v-model="selectedRows" class="elevation-0" hide-default-footer
+                            style="border: 1px solid #efeef3;background-color:white">
+                            <template v-slot:footer>
+                                <v-divider></v-divider>
+                                <div class="text-center" v-if="hhdhdhhhdhh">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize" @click="sssssssssss()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See more
+                                            stocks</span> <v-icon color="black"> mdi-chevron-down</v-icon>
+                                    </v-btn>
+                                </div>
+                                <div class="text-center" v-if="iiiiiiii">
+
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize"
+                                        @click="Seemorestocksup()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See Less
+                                            stocks</span> <v-icon color="black"> mdi-chevron-up</v-icon>
+                                    </v-btn>
+                                </div>
+                            </template>
+                            <template v-slot:header>
+                                <tr class="" style="background-color: #FAFBFF;">
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Scrips</span></th>
+
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">
+                                            Mkt cap <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </th>
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">Volume
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </th>
+                                    <th class="text-start"><span class="pl-2 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Price</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">%Chg</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">200dma</span></th>
+                                    <th class="pt-1"> <v-row class="mr-0">
+                                            <v-col cols="10">
+                                                <span class="pl-2 " style="color:#666666 ;font-size: 13px">Day’s
+                                                    range</span>
+                                            </v-col>
+                                            <v-col cols="2">
+                                                <v-menu left offset-y>
+                                                    <template v-slot:activator="{ on, attrs }">
+
+                                                        <v-btn v-bind="attrs" v-on="on" plain :ripple="false"
+                                                            class="buttoncontant mt-n1" icon>
+                                                            <v-icon size="19" color="black">mdi-dots-vertical</v-icon>
+                                                        </v-btn>
+                                                    </template>
+                                                    <v-list>
+                                                        <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                                            <v-list-item-title>{{ item.title
+                                                            }}</v-list-item-title>
+                                                        </v-list-item>
+                                                    </v-list>
+                                                </v-menu>
+                                            </v-col>
+                                        </v-row></th>
+                                    <th class="text-start"></th>
+                                </tr>
+                            </template>
+                            <!-- <v-divider></v-divider> -->
+                            <template v-slot:item="{ item }">
+                                <tr class="" style="background-color: ;position: relative;" @mouseover="selectItem(item)"
+                                    @mouseleave="unSelectItem(item)">
+                                    <td class="font-weight-bold pr-0" style="color: #000000;font-size: 14px;width:290px;">
+                                        <p> {{ item.TradingSymbol }}</p>
+
+                                        <div class="display-flex row">
+                                            <v-card v-if="item.alert == 'ALERT'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="60px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto  text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" src="@/assets/zebu-stocks/alertimg.svg"
+                                                        width="9px" />
+                                                    {{ item.alert }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.event == 'EVENTS'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="68px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" src="@/assets/zebu-stocks/eventesimg.svg"
+                                                        width="10px" />
+                                                    {{ item.event }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.News == 'News'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="57px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 text-center "
+                                                    style="color:#666666;font-size:11px">
+                                                    <img class="pt-n2" src="@/assets/zebu-stocks/newsimg.svg"
+                                                        width="10px" />
+                                                    {{ item.News }}
+                                                </p>
+                                            </v-card>
+                                        </div>
+                                        <div class="postionchange" v-if="item === selectedItem">
+                                            <div class="display-flex row ">
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#43A833">B</v-btn>
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#FF1717">S</v-btn>
+                                                <v-btn class="pa-0  elevation-0 ml-1" outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"><img
+                                                        alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradingsymbol.svg')"
+                                                        width="15px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0  elevation-0" outlined small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"
+                                                    color="#43A833">
+                                                    <img alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradinnote.svg')"
+                                                        width="12px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0 elevation-0 " outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF">
+                                                    <v-icon color="#666666" size="20">mdi-dots-horizontal</v-icon></v-btn>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class=" pr-0">
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.calories }}<span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </td>
+                                    <td>
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.vol }}
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </td>
+                                    <td class="pr-0 pl-2"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.lp }}</span></td>
+                                    <td class="pr-0" v-if="item.ch > 0">
+                                        <span class="text-wrap font-weight-medium"
+                                            style="color:#43A833 !important;font-size: 13px;">{{ item.ch }}%</span>
+                                    </td>
+                                    <td class="pr-0" v-else><span class="font-weight-medium"
+                                            style="color:red !important; font-size: 13px;">{{ item.ch }}%</span></td>
+                                    <td class="pr-0 pl-4"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.iron }}</span></td>
+                                    <td>
+                                        <v-row no-gutters class="pl-3">
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold" style="font-size:13px;color:#000000">{{
+                                                    item.low
+                                                }}</span>
+                                            </v-col>
+                                            <v-col class="mt-4" cols="6">
+                                                <v-slider disabled :ripple="false" class="mt-1" v-model="value"
+                                                    thumb-color="black" track-color="#D9D9D9" :thumb-size="1" />
+                                            </v-col>
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold pl-0 " style="font-size:13px;color:#000000">
+                                                    {{ item.high
+                                                    }}</span>
+                                            </v-col>
+                                        </v-row>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </template>
+                        </v-data-table>
+                    </v-tab-item>
+                    <!-- table -2 -->
+                    <v-tab-item>
+                        <v-data-table hide-default-header :headers="headers" :items="loosers" :items-per-page="ggggggggggg"
+                            item-key="id" v-model="selectedRows" class="elevation-0" hide-default-footer
+                            style="border: 1px solid #efeef3;background-color:white">
+                            <template v-slot:footer>
+                                <v-divider></v-divider>
+                                <div class="text-center" v-if="hhdhdhhhdhh">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize" @click="sssssssssss()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See more
+                                            stocks</span> <v-icon color="black"> mdi-chevron-down</v-icon>
+                                    </v-btn>
+                                </div>
+                                <div class="text-center" v-if="iiiiiiii">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize"
+                                        @click="Seemorestocksup()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See Less
+                                            stocks</span> <v-icon color="black"> mdi-chevron-up</v-icon>
+                                    </v-btn>
+                                </div>
+                            </template>
+                            <template v-slot:header>
+                                <tr class="" style="background-color: #FAFBFF;border: 1px solid red;">
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Scrips</span></th>
+
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">
+                                            Mkt cap <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </th>
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">Volume
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </th>
+                                    <th class="text-start"><span class="pl-2 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Price</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">%Chg</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">200dma</span></th>
+                                    <th class="pt-1"> <v-row class="mr-0">
+                                            <v-col cols="10">
+                                                <span class="pl-2 " style="color:#666666 ;font-size: 13px">Day’s
+                                                    range</span>
+                                            </v-col>
+                                            <v-col cols="2">
+                                                <v-menu left offset-y>
+                                                    <template v-slot:activator="{ on, attrs }">
+
+                                                        <v-btn v-bind="attrs" v-on="on" plain :ripple="false"
+                                                            class="buttoncontant mt-n1" icon>
+                                                            <v-icon size="19" color="black">mdi-dots-vertical</v-icon>
+                                                        </v-btn>
+                                                    </template>
+                                                    <v-list>
+                                                        <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                                            <v-list-item-title>{{ item.title
+                                                            }}</v-list-item-title>
+                                                        </v-list-item>
+                                                    </v-list>
+                                                </v-menu>
+                                            </v-col>
+                                        </v-row></th>
+                                    <th class="text-start"></th>
+                                </tr>
+                            </template>
+                            <template v-slot:item="{ item }">
+                                <tr class="" style="background-color: ;position: relative;" @mouseover="selectItem(item)"
+                                    @mouseleave="unSelectItem(item)">
+                                    <td class="font-weight-bold pr-0" style="color: #000000;font-size: 14px;width:290px;">
+                                        <p> {{ item.TradingSymbol }}</p>
+                                        <div class="display-flex row">
+                                            <v-card v-if="item.alert == 'ALERT'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="60px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto  text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" :src="item.image1" width="9px" />
+                                                    {{ item.alert }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.event == 'EVENTS'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="68px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" :src="item.image2" width="10px" />
+                                                    {{ item.event }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.News == 'News'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="57px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 text-center "
+                                                    style="color:#666666;font-size:11px">
+                                                    <img class="pt-n2" :src="item.image3" width="10px" />
+                                                    {{ item.News }}
+                                                </p>
+                                            </v-card>
+                                        </div>
+                                        <div class="postionchange" v-if="item === selectedItem">
+                                            <div class="display-flex row ">
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#43A833">B</v-btn>
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#FF1717">S</v-btn>
+                                                <v-btn class="pa-0  elevation-0 ml-1" outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"><img
+                                                        alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradingsymbol.svg')"
+                                                        width="15px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0  elevation-0" outlined small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"
+                                                    color="#43A833">
+                                                    <img alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradinnote.svg')"
+                                                        width="12px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0 elevation-0 " outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF">
+                                                    <v-icon color="#666666" size="20">mdi-dots-horizontal</v-icon></v-btn>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class=" pr-0">
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.vol }}<span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </td>
+                                    <td>
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.vol }}
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </td>
+                                    <td class="pr-0 pl-2"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.lp }}</span></td>
+                                    <td class="pr-0" v-if="item.ch > 0">
+                                        <span class="text-wrap font-weight-medium"
+                                            style="color:#43A833 !important;font-size: 13px;">{{ item.ch }}%</span>
+                                    </td>
+                                    <td class="pr-0" v-else><span class="font-weight-medium"
+                                            style="color:red !important; font-size: 13px;">{{ item.ch }}%</span></td>
+                                    <td class="pr-0 pl-4"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.iron }}</span></td>
+                                    <td>
+                                        <v-row no-gutters class="pl-3">
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold" style="font-size:13px;color:#000000">{{
+                                                    item.low
+                                                }}</span>
+                                            </v-col>
+                                            <v-col class="mt-4" cols="6">
+                                                <v-slider disabled :ripple="false" class="mt-1" v-model="value"
+                                                    thumb-color="black" track-color="#D9D9D9" :thumb-size="1" />
+                                            </v-col>
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold pl-0 " style="font-size:13px;color:#000000">
+                                                    {{ item.high
+                                                    }}</span>
+                                            </v-col>
+                                        </v-row>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </template>
+                        </v-data-table>
+                    </v-tab-item>
+                    <!-- table -3 -->
+                    <v-tab-item>
+                        <v-data-table hide-default-header :headers="headers" :items="desserts" :items-per-page="ggggggggggg"
+                            item-key="id" v-model="selectedRows" class="elevation-0" hide-default-footer
+                            style="border: 1px solid #efeef3;background-color:white">
+                            <template v-slot:footer>
+                                <v-divider></v-divider>
+                                <div class="text-center" v-if="hhdhdhhhdhh">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize" @click="sssssssssss()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See more
+                                            stocks</span> <v-icon color="black"> mdi-chevron-down</v-icon>
+                                    </v-btn>
+                                </div>
+                                <div class="text-center" v-if="iiiiiiii">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize"
+                                        @click="Seemorestocksup()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See Less
+                                            stocks</span> <v-icon color="black"> mdi-chevron-up</v-icon>
+                                    </v-btn>
+                                </div>
+                            </template>
+                            <template v-slot:header>
+                                <tr class="" style="background-color: #FAFBFF;border: 1px solid red;">
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Scrips</span></th>
+
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">
+                                            Mkt cap <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </th>
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">Volume
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </th>
+                                    <th class="text-start"><span class="pl-2 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Price</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">%Chg</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">200dma</span></th>
+                                    <th class="pt-1"> <v-row class="mr-0">
+                                            <v-col cols="10">
+                                                <span class="pl-2 " style="color:#666666 ;font-size: 13px">Day’s
+                                                    range</span>
+                                            </v-col>
+                                            <v-col cols="2">
+                                                <v-menu left offset-y>
+                                                    <template v-slot:activator="{ on, attrs }">
+
+                                                        <v-btn v-bind="attrs" v-on="on" plain :ripple="false"
+                                                            class="buttoncontant mt-n1" icon>
+                                                            <v-icon size="19" color="black">mdi-dots-vertical</v-icon>
+                                                        </v-btn>
+                                                    </template>
+                                                    <v-list>
+                                                        <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                                            <v-list-item-title>{{ item.title
+                                                            }}</v-list-item-title>
+                                                        </v-list-item>
+                                                    </v-list>
+                                                </v-menu>
+                                            </v-col>
+                                        </v-row></th>
+                                    <th class="text-start"></th>
+                                </tr>
+                            </template>
+                            <template v-slot:item="{ item }">
+                                <tr class="" style="background-color: ;position: relative;" @mouseover="selectItem(item)"
+                                    @mouseleave="unSelectItem(item)">
+                                    <td class="font-weight-bold pr-0" style="color: #000000;font-size: 14px;width:290px;">
+                                        <p> {{ item.title }}</p>
+                                        <div class="display-flex row">
+                                            <v-card v-if="item.alert == 'ALERT'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="60px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto  text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" :src="item.image1" width="9px" />
+                                                    {{ item.alert }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.event == 'EVENTS'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="68px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" :src="item.image2" width="10px" />
+                                                    {{ item.event }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.News == 'News'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="57px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 text-center "
+                                                    style="color:#666666;font-size:11px">
+                                                    <img class="pt-n2" :src="item.image3" width="10px" />
+                                                    {{ item.News }}
+                                                </p>
+                                            </v-card>
+                                        </div>
+                                        <div class="postionchange" v-if="item === selectedItem">
+                                            <div class="display-flex row ">
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#43A833">B</v-btn>
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#FF1717">S</v-btn>
+                                                <v-btn class="pa-0  elevation-0 ml-1" outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"><img
+                                                        alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradingsymbol.svg')"
+                                                        width="15px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0  elevation-0" outlined small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"
+                                                    color="#43A833">
+                                                    <img alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradinnote.svg')"
+                                                        width="12px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0 elevation-0 " outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF">
+                                                    <v-icon color="#666666" size="20">mdi-dots-horizontal</v-icon></v-btn>
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class=" pr-0">
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.calories }}<span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </td>
+                                    <td>
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.fat }}
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </td>
+                                    <td class="pr-0 pl-2"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.carbs }}</span></td>
+                                    <td class="pr-0" v-if="item.protein > 0">
+                                        <span class="text-wrap font-weight-medium"
+                                            style="color:#43A833 !important;font-size: 13px;">{{ item.protein }}
+                                            %</span>
+                                    </td>
+                                    <td class="pr-0" v-else><span class="font-weight-medium"
+                                            style="color:red !important; font-size: 13px;">{{ item.protein }}
+                                            %</span></td>
+                                    <td class="pr-0 pl-4"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.iron }}</span></td>
+                                    <td>
+                                        <v-row no-gutters class="pl-3">
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold" style="font-size:13px;color:#000000">{{
+                                                    item.dddddd
+                                                }}</span>
+                                            </v-col>
+                                            <v-col class="mt-4" cols="6">
+                                                <v-slider disabled :ripple="false" class="mt-1" v-model="value"
+                                                    thumb-color="black" track-color="#D9D9D9" :thumb-size="1" />
+                                            </v-col>
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold pl-0 " style="font-size:13px;color:#000000">
+                                                    {{ item.ccccc
+                                                    }}</span>
+                                            </v-col>
+                                        </v-row>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </template>
+                        </v-data-table>
+                    </v-tab-item>
+                    <!-- table -4 -->
+                    <v-tab-item>
+                        <v-data-table hide-default-header :headers="headers" :items="gainvalue"
+                            :items-per-page="ggggggggggg" item-key="id" v-model="selectedRows" class="elevation-0"
+                            hide-default-footer style="border: 1px solid #efeef3;background-color:white">
+                            <template v-slot:footer>
+                                <v-divider></v-divider>
+                                <div class="text-center" v-if="hhdhdhhhdhh">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize" @click="sssssssssss()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See more
+                                            stocks</span> <v-icon color="black"> mdi-chevron-down</v-icon>
+                                    </v-btn>
+                                </div>
+                                <div class="text-center" v-if="iiiiiiii">
+                                    <v-btn text color="primary" dark class="ma-2 text-capitalize"
+                                        @click="Seemorestocksup()">
+                                        <span class="font-weight-bold" style="color: #0037B7;font-size: 14px;">See Less
+                                            stocks</span> <v-icon color="black"> mdi-chevron-up</v-icon>
+                                    </v-btn>
+                                </div>
+                            </template>
+                            <template v-slot:header>
+                                <tr class="" style="background-color: #FAFBFF;border: 1px solid red;">
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Scrips</span></th>
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">
+                                            Mkt cap <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </th>
+                                    <th class="text-start">
+                                        <P class="pl-4 pt-1 pb-1 mb-0" style="color:#666666 ;font-size: 13px">Volume
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </th>
+                                    <th class="text-start"><span class="pl-2 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">Price</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">%Chg</span></th>
+                                    <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                            style="color:#666666 ;font-size: 13px">200dma</span></th>
+                                    <th class="pt-1"> <v-row class="mr-0">
+                                            <v-col cols="10">
+                                                <span class="pl-2 " style="color:#666666 ;font-size: 13px">Day’s
+                                                    range</span>
+                                            </v-col>
+                                            <v-col cols="2">
+                                                <v-menu left offset-y>
+                                                    <template v-slot:activator="{ on, attrs }">
+                                                        <v-btn v-bind="attrs" v-on="on" plain :ripple="false"
+                                                            class="buttoncontant mt-n1" icon>
+                                                            <v-icon size="19" color="black">mdi-dots-vertical</v-icon>
+                                                        </v-btn>
+                                                    </template>
+                                                    <v-list>
+                                                        <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                                            <v-list-item-title>{{ item.title
+                                                            }}</v-list-item-title>
+                                                        </v-list-item>
+                                                    </v-list>
+                                                </v-menu>
+                                            </v-col>
+                                        </v-row></th>
+                                    <th class="text-start"></th>
+                                </tr>
+                            </template>
+                            <template v-slot:item="{ item }">
+                                <tr class="" style="background-color: ;position: relative;" @mouseover="selectItem(item)"
+                                    @mouseleave="unSelectItem(item)">
+                                    <td class="font-weight-bold pr-0" style="color: #000000;font-size: 14px;width:290px;">
+                                        <p> {{ item.TradingSymbol }}</p>
+                                        <div class="display-flex row">
+                                            <v-card v-if="item.alert == 'ALERT'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="60px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto  text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" :src="item.image1" width="9px" />
+                                                    {{ item.alert }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.event == 'EVENTS'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="68px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 mx-auto text-center"
+                                                    style="color:#666666;font-size:10px">
+                                                    <img class="pt-n2" :src="item.image2" width="10px" />
+                                                    {{ item.event }}
+                                                </p>
+                                            </v-card>
+                                            <v-card v-if="item.News == 'News'" class="pa-1 ml-2 mb-3" elevation="0"
+                                                width="57px" :color="item === selectedItem ? '#FFFFFF' : '#F1F3F8'">
+                                                <p class="font-weight-medium mb-0 text-center "
+                                                    style="color:#666666;font-size:11px">
+                                                    <img class="pt-n2" :src="item.image3" width="10px" />
+                                                    {{ item.News }}
+                                                </p>
+                                            </v-card>
+                                        </div>
+                                        <div class="postionchange" v-if="item === selectedItem">
+                                            <div class="display-flex row ">
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#43A833">B</v-btn>
+                                                <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                                    style="min-width:23px;border-radius: 4px;" color="#FF1717">S</v-btn>
+                                                <v-btn class="pa-0  elevation-0 ml-1" outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"><img
+                                                        alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradingsymbol.svg')"
+                                                        width="15px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0  elevation-0" outlined small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF"
+                                                    color="#43A833">
+                                                    <img alt="" class="shrink "
+                                                        :src="require('@/assets/zebu-stocks/tradinnote.svg')"
+                                                        width="12px" /></v-btn>
+                                                <v-btn class="ml-1 pa-0 elevation-0 " outlined dense small
+                                                    style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;background-color:#FFFFFF">
+                                                    <v-icon color="#666666" size="20">mdi-dots-horizontal</v-icon></v-btn>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class=" pr-0">
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.calories }}<span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(cr)</span></p>
+                                    </td>
+                                    <td>
+                                        <p class="font-weight-bold mb-0" style="font-size:13px;color:#000000">{{
+                                            item.vol }}
+                                            <span class="font-weight-medium"
+                                                style="color:#999999 ;font-size: 13px">&nbsp;(k)</span>
+                                        </p>
+                                    </td>
+                                    <td class="pr-0 pl-2"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.lp }}</span></td>
+                                    <td class="pr-0" v-if="item.change > 0">
+                                        <span class="text-wrap font-weight-medium"
+                                            style="color:#43A833 !important;font-size: 13px;">{{ item.change }}
+                                            %</span>
+                                    </td>
+                                    <td class="pr-0" v-else><span class="font-weight-medium"
+                                            style="color:red !important; font-size: 13px;">{{ item.change }}
+                                            %</span></td>
+                                    <td class="pr-0 pl-4"><span class="font-weight-bold"
+                                            style="font-size:13px;color:#000000">{{ item.iron }}</span></td>
+                                    <td>
+                                        <v-row no-gutters class="pl-3">
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold" style="font-size:13px;color:#000000">{{
+                                                    item.low
+                                                }}</span>
+                                            </v-col>
+                                            <v-col class="mt-4" cols="6">
+                                                <v-slider disabled :ripple="false" class="mt-1" v-model="value"
+                                                    thumb-color="black" track-color="#D9D9D9" :thumb-size="1" />
+                                            </v-col>
+                                            <v-col class="mt-6" cols="3">
+                                                <span class="font-weight-bold pl-0 " style="font-size:13px;color:#000000">
+                                                    {{ item.high
+                                                    }}</span>
+                                            </v-col>
+                                        </v-row>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </template>
+                        </v-data-table>
+                    </v-tab-item>
+                </v-tabs-items>
+                <v-card class="mt-10 pt-5 pb-3 elevation-0" color="#F1F3F8">
+                    <v-row no-gutters>
+                        <v-col cols="6">
+                            <p class="pl-8 font-weight-bold text-capitalize" style="font-size: 23px; color:#000000
+">Invest easy with curated <br>ideas and ready made<br> collections
+                            </p>
+                            <div class="display-flex">
+                                <v-btn class="rounded-xl ml-8 pa-2" outlined>
+                                    <span class="font-weight-bold text-capitalize" style="font-size: 14px; color:#000000
+">Growth factor</span>
+                                </v-btn>
+                                <v-btn class="rounded-xl pa-2 ml-2" outlined>
+                                    <span class="font-weight-bold text-capitalize" style="font-size: 14px; color:#666666
+">Lower risk
+                                    </span>
+                                </v-btn>
+                                <v-btn dense class="rounded-xl pa-2 ml-2" outlined>
+                                    <span class="font-weight-bold text-capitalize" style="font-size: 14px; color:#666666
+">ESG investing
+                                    </span>
+                                </v-btn>
+                            </div>
+                            <p class="pl-8 pt-6 pb-2 mb-16 font-weight-medium " style="font-size: 14px; color:#666666
+">Handpicked global baskets of stocks managed <br> by global institutions and fund managers
+                            </p>
+                            <v-btn class="mt-13 ml-6
+                  text-capitalize" :ripple="false" text>
+                                <span class="font-weight-bold" style="font-size: 14px; color:#0037B7">View all
+                                    collections</span>
+                            </v-btn>
+                        </v-col>
+                        <v-col cols="6">
+                            <v-card class="elevation-0 mb-3 mr-4 elevation-0" v-for="folder in folders" height="120px"
+                                :key="folder.title">
+                                <v-list>
+                                    <v-list-item class="pr-0">
+                                        <v-list-item-avatar class="mt-n1"> <v-img :src="folder.icon"></v-img>
+                                        </v-list-item-avatar>
+                                        <v-list-item-content class="pt-2">
+                                            <v-list-item-title><span class="font-weight-bold"
+                                                    style="color:#000000;font-size:16px">{{ folder.title
+                                                    }}</span></v-list-item-title>
+                                            <v-list-item-subtitle>
+                                                <v-row no-gutters class="pt-1">
+                                                    <v-col cols="4">
+                                                        <v-card class=" elevation-0" color="#F1F3F8">
+                                                            <p class="pt-1  pb-1 mb-0 font-weight-medium text-center"
+                                                                style="color:#666666;font-size:10px">
+                                                                {{ folder.subtitlefirst }}</p>
+                                                        </v-card>
+                                                    </v-col>
+                                                    <v-col cols="5">
+                                                        <v-card class="ml-2 elevation-0" color="#F1F3F8" width="72px">
+                                                            <p class="pt-1 pb-1 mb-0 font-weight-medium text-center"
+                                                                style="color:#666666;font-size:10px">
+                                                                {{ folder.subtitlesecond }}</p>
+                                                        </v-card>
+                                                    </v-col>
+                                                </v-row></v-list-item-subtitle>
+                                        </v-list-item-content>
+                                        <v-list-item-action class="mt-n1 mr-n2">
+                                            <router-link to="/">
+                                                <img alt="" class="shrink ml-3"
+                                                    :src="require('@/assets/zebu-stocks/dividentimg.svg')"
+                                                    width="27px" /></router-link>
+                                        </v-list-item-action>
+                                        <v-list-item-action class="mt-n1">
+                                            <router-link to="/">
+                                                <img alt="" class="shrink pr-3"
+                                                    :src="require('@/assets/zebu-stocks/highrisk.svg')" /></router-link>
+                                        </v-list-item-action>
+                                    </v-list-item>
+                                    <v-row class="mb-1" no-gutters>
+                                        <v-col cols="2"></v-col>
+                                        <v-col cols="3">
+                                            <v-list-item-content class="pt-0 pb-0 pl-1">
+                                                <v-list-item-title class=""> <span class="font-weight-medium"
+                                                        style="font-size:10px ; color: #666666;">{{ folder.subsecfirst }}
+                                                    </span></v-list-item-title>
+                                                <v-list-item-subtitle><span class="font-weight-bold"
+                                                        style="font-size:13px ; color: #000000;">
+                                                        {{ folder.subsecsecond }}</span>
+                                                </v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-col>
+                                        <v-col cols="2">
+                                            <v-list-item-content class="pt-0 pb-0">
+                                                <v-list-item-title class=""> <span class="font-weight-medium"
+                                                        style="font-size:10px ; color: #666666;">{{
+                                                            folder.subthreefirst
+                                                        }}</span></v-list-item-title>
+                                                <v-list-item-subtitle><span class="font-weight-medium"
+                                                        style="font-size:13px ; color: #43A833;">{{
+                                                            folder.subthreesecond
+                                                        }}</span></v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-col>
+                                        <v-col cols="3">
+                                            <v-list-item-content class="pt-0 pb-0">
+                                                <v-list-item-title class=""><span class="font-weight-medium"
+                                                        style="font-size:10px ; color: #666666;">{{
+                                                            folder.subfourfirst
+                                                        }}</span></v-list-item-title>
+                                                <v-list-item-subtitle> <span class="font-weight-bold"
+                                                        style="font-size:13px ; color: #000000;">{{
+                                                            folder.subfoursecond }}</span>
+                                                </v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-col>
+                                        <v-col cols="1"></v-col>
+                                    </v-row>
+                                </v-list>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-card>
+                <div class="mt-5 ">
+                    <v-card class="pb-2 elevation-0" color="#F1F3F8">
+                        <v-toolbar class="pl-4 pt-1 contantpaddingreduced font-weight-bold elevation-0" color="#F1F3F8">
+                            <v-toolbar-title class=""
+                                style="color:#000000;background-color: #F1F3F8;font-size: 23px;">Sector
+                                collections</v-toolbar-title>
+                            <v-spacer></v-spacer>
+                            <v-btn class="rounded-xl pa-2 mr-2" outlined>
+                                <span class="font-weight-bold text-capitalize" style="font-size: 14px; color:#000000
+">Turnaround</span>
+                            </v-btn>
+                            <v-btn class="rounded-xl pa-2 mr-2" outlined>
+                                <span class="font-weight-medium text-capitalize" style="font-size: 14px; color:#000000
+">High return
+                                </span>
+                            </v-btn>
+                            <v-btn dense class="rounded-xl pa-2" outlined>
+                                <span class="font-weight-medium text-capitalize" style="font-size: 14px; color:#666666
+">Compounding
+                                </span>
+                            </v-btn>
+                        </v-toolbar>
+                        <p class="pl-8  font-weight-regular " style="font-size: 14px; color:#666666
+">Handpicked global baskets of stocks managed <br> by global institutions and fund managers
+                        </p>
+                        <div class="hhhhhhhhhhh pt-2 ml-5 mr-3" style="height:">
+                            <div class="" style="overflow: scroll; ">
+                                <div class="" style="display: inline-flex; overflow: hidden; ">
+
+                                    <v-card class="rounded-lg ml-2  pl-4 pt-3 pr-2  elevation-0" width="240px"
+                                        v-for="sectorcntrl in Sectorcollections" :key="sectorcntrl.title"
+                                        style="background: #FEFEFE !important;">
+                                        <p class="mb-2 font-weight-bold" style="font-size:16px;color: #000000;"> {{
+                                            sectorcntrl.title
+                                        }}</p>
+                                        <p class="mb-1 font-weight-bold mt-2" style="font-size:16px;color: #000000;">{{
+                                            sectorcntrl.subtitle }}</p>
+                                        <div v-if="sectorcntrl.subtitleone > 0">
+                                            <p class="mb-1 font-weight-medium" style="font-size:13px;color: #43A833;"><img
+                                                    alt="" class="shrink"
+                                                    :src="require('@/assets/zebu-stocks/greentraingle.svg')" width="12x" />
+                                                {{ sectorcntrl.subtitleone }}</p>
+                                        </div>
+                                        <div v-else>
+                                            <p class="mb-1 font-weight-medium" style="font-size:13px;color: red;">
+                                                <img alt="" class="shrink"
+                                                    :src="require('@/assets/zebu-stocks/redtraingle.svg')" width="12x" />
+                                                {{ sectorcntrl.subtitleone }}
+                                            </p>
+                                        </div>
+                                        <v-row class="mt-2">
+                                            <v-col cols="7">
+                                                <p class="mb-1  font-weight-medium" style="font-size:11px;color: #666666;">
+                                                    {{
+                                                        sectorcntrl.subtitletwo }}</p>
+                                                <p class="mb-0 font-weight-bold" style="font-size:11px;color: #000000;">{{
+                                                    sectorcntrl.subtitlethree }}</p>
+                                            </v-col>
+                                            <v-col cols="5">
+                                                <p class="mb-1 font-weight-medium" style="font-size:11px;color: #666666;">{{
+                                                    sectorcntrl.subtitlefour }}</p>
+                                                <p class="mb-0 font-weight-bold" style="font-size:11px;color: #666666;">{{
+                                                    sectorcntrl.subtitlefive }}</p>
+                                            </v-col>
+                                        </v-row>
+                                        <v-row class="">
+                                            <v-col cols="2" class="ml-1 pl-0 " v-for="sectorcntrl in Sectorcollections"
+                                                :key="sectorcntrl.title">
+                                                <img alt="" class="shrink " :src="sectorcntrl.icon" width="40px" />
+                                            </v-col>
+                                        </v-row>
+                                        <p class="mb-2 font-weight-medium" style="font-size:11px;color: #666666;">+
+                                            18 more</p>
+                                    </v-card>
+                                </div>
+                            </div>
+                        </div>
+                        <v-btn @click="stockTosector()" class="mt-3 mb-1 ml-6
+                  text-capitalize" :ripple="false" text style="">
+                            <span class="font-weight-bold " style="font-size: 14px; color:#0037B7">View
+                                all collections</span>
+                        </v-btn>
+                    </v-card>
+                </div>
+                <v-card class="mt-5 py-5 elevation-0" color="#F1F3F8">
+                    <v-row no-gutters>
+                        <v-col cols="6">
+                            <p class="pl-8 font-weight-bold text-capitalize headline" style="color:#000000">Pick portfolio’s
+                                like <br>your superstars.<br> Follow them below.
+                            </p>
+                            <div class="display-flex">
+                                <v-btn class="rounded-xl ml-8 pa-2" outlined>
+                                    <span class="font-weight-bold text-capitalize"
+                                        style="font-size: 14px; color:#000000">Individuals</span>
+                                </v-btn>
+                                <v-btn class="rounded-xl pa-2 ml-2" outlined>
+                                    <span class="font-weight-medium text-capitalize"
+                                        style="font-size: 14px; color:#666666">Wealth managers
+                                    </span>
+                                </v-btn>
+                            </div>
+                            <p class="pl-8 pt-8 pb-2  mb-16 font-weight-medium " style="font-size: 14px; color:#666666">
+                                Handpicked global baskets of stocks managed <br> by global institutions and fund managers
+                            </p>
+                            <v-btn class="mt-13 ml-6 text-capitalize" :ripple="false" text style="">
+                                <span class="font-weight-bold " style="font-size: 14px; color:#0037B7">View all
+                                    collections</span>
+                            </v-btn>
+                        </v-col>
+                        <v-col cols="6">
+                            <v-card class="elevation-0 mb-3 mr-3 elevation-0" v-for="folder in folders" height="120px"
+                                :key="folder.title">
+                                <v-list>
+                                    <v-list-item class="pr-0">
+                                        <v-list-item-avatar class="white--text mt-n1" color="blue">
+                                            {{ folder.title.slice(0, 1) }}
+                                        </v-list-item-avatar>
+                                        <v-list-item-content class="pt-2">
+                                            <v-list-item-title><span class="font-weight-bold"
+                                                    style="color:#000000;font-size:16px">{{ folder.title
+                                                    }}</span></v-list-item-title>
+                                            <v-list-item-subtitle>
+                                                <v-row no-gutters class="pt-1">
+                                                    <v-col cols="4">
+                                                        <v-card class=" elevation-0" color="#F1F3F8">
+                                                            <p class="pt-1  pb-1 mb-0 font-weight-medium text-center"
+                                                                style="color:#666666;font-size:10px">
+                                                                {{ folder.subtitlefirst }}</p>
+                                                        </v-card>
+                                                    </v-col>
+                                                    <v-col cols="5">
+                                                        <v-card class="ml-2 elevation-0 " color="#F1F3F8" width="72px">
+                                                            <p class="pt-1 pb-1 mb-0 font-weight-medium text-center"
+                                                                style="color:#666666;font-size:10px">
+                                                                {{ folder.subtitlesecond }}</p>
+                                                        </v-card>
+                                                    </v-col>
+                                                </v-row>
+                                            </v-list-item-subtitle>
+                                        </v-list-item-content>
+                                        <v-list-item-action class="mt-n1 mr-n2">
+                                            <router-link to="/"> <img alt="" class="shrink ml-3  "
+                                                    :src="require('@/assets/zebu-stocks/dividentimg.svg')"
+                                                    width="27px" /></router-link>
+                                        </v-list-item-action>
+                                        <v-list-item-action class="mt-n1">
+                                            <router-link to="/"> <img alt="" class="shrink pr-3"
+                                                    :src="require('@/assets/zebu-stocks/highrisk.svg')" /></router-link>
+                                        </v-list-item-action>
+                                    </v-list-item>
+                                    <v-row class="mb-1" no-gutters>
+                                        <v-col cols="2"></v-col>
+                                        <v-col cols="3">
+                                            <v-list-item-content class="pt-0 pb-0 pl-1">
+                                                <v-list-item-title class=""> <span class="font-weight-medium"
+                                                        style="font-size:10px ; color: #666666;">{{
+                                                            folder.subsecfirst }}</span></v-list-item-title>
+                                                <v-list-item-subtitle><span class="font-weight-bold"
+                                                        style="font-size:13px ; color: #000000;">
+                                                        {{ folder.subsecsecond }}</span>
+                                                </v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-col>
+                                        <v-col cols="2">
+                                            <v-list-item-content class="pt-0 pb-0">
+                                                <v-list-item-title class=""> <span class="font-weight-medium"
+                                                        style="font-size:10px ; color: #666666;">{{
+                                                            folder.subthreefirst
+                                                        }}</span></v-list-item-title>
+                                                <v-list-item-subtitle><span class="font-weight-medium"
+                                                        style="font-size:13px ; color: #43A833;">{{
+                                                            folder.subthreesecond
+                                                        }}</span></v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-col>
+                                        <v-col cols="3">
+                                            <v-list-item-content class="pt-0 pb-0">
+                                                <v-list-item-title class=""><span class="font-weight-medium"
+                                                        style="font-size:10px ; color: #666666;">{{
+                                                            folder.subfourfirst
+                                                        }}</span></v-list-item-title>
+                                                <v-list-item-subtitle> <span class="font-weight-bold"
+                                                        style="font-size:13px ; color: #000000;">{{
+                                                            folder.subfoursecond }}</span>
+                                                </v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-col>
+                                        <v-col cols="1"></v-col>
+                                    </v-row>
+                                </v-list>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-card>
+            </v-col>
+            <v-col cols="3" align="right" class="pt-0 pr-0">
+                <p class="text-end">new</p>
+                <v-toolbar class="toolbar-contant" elevation="0" color="white">
+                    <v-toolbar-title class="font-weight-bold"
+                        style="color: #000000;font-size:16px;min-height:0px;">Watchlists</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-menu left offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+
+                            <v-btn v-bind="attrs" v-on="on" plain :ripple="false" class=" " icon>
+                                <v-icon color="black">mdi-dots-vertical</v-icon>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                </v-toolbar>
+                <v-select v-model="nnnnnnnnn" label="Your watchlist" append-icon="mdi-chevron-down" class="rounded-lg"
+                    color="gray" dense>
+                    <template v-slot:append>
+                        <p class="" style="font-size:14px">0 items <v-icon color="black">
+                                mdi-chevron-down</v-icon> </p>
+                    </template>
+                </v-select>
+                <div class="text-center mt-10">
+                    <img class="" :src="require('@/assets/zebu-stocks/nowstocks.svg')" width="24px" height="28px" />
+                    <p class="font-weight-medium" style="font-size:16px;color: #000000;">Now track your favorite
+                        stocks by adding them to your watchlist.</p>
+                </div>
+                <p class="text-center mt-12 pt-16 mb-1">
+                    <img class="" :src="require('@/assets/zebu-stocks/create-watchlist.svg')" width="12px" height="" />
+                    <span class="font-weight-bold text-center mt-n6 ml-2" style="font-size:14px;color: #0037B7;">
+                        Create new watchlist</span>
+                </p>
+                <v-divider class="mx-3"></v-divider>
+                <v-card class="mt-8 mx-auto" outlined>
+                    <div class="pt-5 pl-6 pr-3">
+                        <p class="font-weight-bold mb-1" style="font-size:11px;color: #0037B7;">POPular</p>
+                        <p class="font-weight-bold mb-1" style="font-size:18px;color: #000000;">Stocks above
+                            daily moving average
+                        </p>
+                        <p class="font-weight-medium" style="font-size:12px;color: #666666;">Companies notching
+                            up eye popping profits consistently and grow</p>
+                    </div>
+                    <img class="" :src="require('@/assets/zebu-stocks/popularstocks.svg')" width="220px;" height="" />
+                </v-card>
+                <v-card class="mt-8 mx-auto" outlined height="244px">
+                    <div class="pt-5 pl-6 pr-3">
+                        <p class="font-weight-bold mb-1" style="font-size:11px;color: #0037B7;">Discover</p>
+                        <p class="font-weight-bold mb-1" style="font-size:18px;color: #000000;">High-Dividend
+                            stocks for april 2023
+                        </p>
+                        <p class="font-weight-medium" style="font-size:12px;color: #666666;">Dividend stocks can
+                            be a great choice for investors to get passive income.</p>
+                    </div>
+                    <img class="pl-6 mt-3" :src="require('@/assets/zebu-stocks/divident-stocks.svg')" width="220px;"
+                        height="" />
+                </v-card>
+                <v-card class="mt-8 mx-auto" outlined height="244px">
+                    <img class="pl-6 mt-3" :src="require('@/assets/zebu-stocks/tradingimg.svg')" width="220px;" height="" />
+
+                    <div class="pt-5 pl-6 pr-3">
+                        <p class="font-weight-bold mb-1" style="font-size:11px;color: #0037B7;">Trending IN</p>
+                        <p class="font-weight-bold mb-1" style="font-size:18px;color: #000000;">Most traded &
+                            top market capital companies
+                        </p>
+                        <p class="font-weight-medium mb-4" style="font-size:12px;color: #666666;">Companies
+                            notching up eye popping profits consistently and grow</p>
+                    </div>
+                </v-card>
+                <v-toolbar class=" toolbar-contant" elevation="0" color="white">
+                    <v-toolbar-title class="font-weight-bold" style="color: #000000;font-size:16px;">Stocks in
+                        news</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-menu left offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+
+                            <v-btn v-bind="attrs" v-on="on" :ripple="false" class="buttoncontant pr-1" plain icon>
+                                <v-icon class="" color="black">mdi-dots-vertical</v-icon>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item v-for="(item, index) in itemsmenu" :key="index">
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                </v-toolbar>
+                <v-card class="elevation-0 " v-for="stocknews in stocksinnews" :key="stocknews.title">
+                    <v-card class="borderline pl-2 mt-2 elevation-0">
+                        <p class="font-weight-medium" style="font-size:14px;color: #000000;">{{ stocknews.title
+                        }}
+                        </p>
+                        <p style="font-size:10px;color:#999999;">22 May, 2023</p>
+                    </v-card>
+                    <v-toolbar class="mb-4" elevation="0" color="#F1F3F8" height="height: 24px">
+                        <v-toolbar-title class="font-weight-bold" style="color: #000000;font-size:12px;">{{
+                            stocknews.bank }}</v-toolbar-title>
+                        <v-toolbar-title class="font-weight-medium ml-2" style="color: #666666;font-size:12px;">{{
+                            stocknews.subtitleone }}</v-toolbar-title>
+                        <v-spacer></v-spacer>
+                        <p class="mb-0 font-weight-medium" style="color: #666666;font-size:12px;">
+                            <img alt="" class="shrink " :src="stocknews.image" height="8px" width="8px" />
+                            <span v-if="stocknews.bulliesh == 'Bearish'" style="color:#FF1717;"> {{ stocknews.bulliesh
+                            }}</span>
+                            <span v-else style="color:#43A833"> {{ stocknews.bulliesh }}</span>
+                        </p>
+                    </v-toolbar>
+                </v-card>
+                <div class="text-center">
+                    <v-btn class="pt-4 block text-capitalize mx-auto" justify-center text @click="readmore()">
+                        <p class="font-weight-bold text-center " style="color: #0037B7;font-size:14px;"> <img class=""
+                                :src="require('@/assets/zebu-stocks/readnews.svg')" width="14px" height="14px" /> Read other
+                            news
+                        </p>
+                    </v-btn>
+                </div>
+            </v-col>
+        </v-row>
+        <div v-if="indices">
+            <v-btn class="pa-0  mt-3" @click="backtostockspge()" text><v-icon color="black"
+                    size="20">mdi-chevron-left</v-icon><span class=" pr-2">Back</span></v-btn>
+            <AllIndices />
+        </div>
+        <div v-if="sectors">
+            <SecTors />
+        </div>
+        <div v-if="singleindex">
+            <SingleIndex :message="selectgrid" />
+        </div>
+    </div>
+</template>
+<script>
+import SingleIndex from '../Stocks pages/SingleIndex.vue'
+import AllIndices from '../Stocks pages/AllIndices.vue'
+import SecTors from '../Stocks pages/SecTors.vue'
+// import { topindex } from '../../apiurl'
+// import { Gainers } from '../../apiurl'
+import { api } from '../apiUrl.js'
+// '../apiUrl.js'
+import axios from "axios";
+export default {
+    data() {
+        return {
+            totalvaluestore: '',
+            valuestore: "",
+            Positivepercentage: '',
+            home: true,
+            indices: false,
+            sectors: false,
+            // gainer:'',
+            selectgrid: '',
+            hdfumutuLFUND: null,
+            value: "50",
+            selectedItem: false,
+            selectedchange: false,
+            hhdhdhhhdhh: true,
+            iiiiiiii: false,
+            ggggggggggg: 6,
+            tab: null,
+            gainer: [],
+            loosers: [],
+            gainvalue: [],
+            tabtopgainer: null,
+            selectedRows: [],
+            itemsss: '',
+            clientids:[],
+            itemsmenu: [
+                { title: 'Click Me' },
+                { title: 'Click Me' },
+                { title: 'Click Me' },
+                { title: 'Click Me 2' },
+            ],
+            TradeActionTab: [
+                "Top gainer", "Top losers", "Volume breakout", "Most active"
+            ],
+            headers: [
+                {
+                    text: "Scrips",
+                    align: "left",
+                    sortable: false,
+                    value: "title", class: "successScrips"
+                },
+                { text: "Mkt cap (cr)", sortable: false, value: "calories", class: "successtitle" },
+                { text: "Volume (k)", sortable: false, value: "calories", class: "successvolume" },
+                { text: "Price", sortable: false, value: "carbs", class: "successprice" },
+                { text: "%Chg", sortable: false, value: "protein", class: "successchg" },
+                { text: "200dma", sortable: false, value: "iron", class: "successma" },
+                { text: "Day’s range", sortable: false, value: "newcreate", class: "successdaysrange" },
+                { text: "", sortable: false, value: "dddddd" }
+            ],
+            items: [
+
+                {
+
+                    title: 'Nifty Bank',
+                    subtitle: "₹17,398.05",
+                    secondtitle: "+0.29%",
+                    secondsubtitle: "vol 245k"
+                },
+                {
+
+                    title: 'Nifty Bank',
+                    subtitle: "₹17,398.05",
+                    secondtitle: "+0.29%",
+                    secondsubtitle: "vol 245k"
+                },
+                {
+
+                    title: 'Nifty Bank',
+                    subtitle: "₹17,398.05",
+                    secondtitle: "+0.29%",
+                    secondsubtitle: "vol 245k"
+                },
+
+                {
+
+                    title: 'Nifty Bank',
+                    subtitle: "₹17,398.05",
+                    secondtitle: "+0.29%",
+                    secondsubtitle: "vol 245k"
+                },
+                {
+
+                    title: 'Nifty Bank',
+                    subtitle: "₹17,398.05",
+                    secondtitle: "+0.29%",
+                    secondsubtitle: "vol 245k"
+                },
+            ],
+            folders: [
+
+                {
+                    icon: require('@/assets/zebu-stocks/dividents.svg'),
+                    subtitlefirst: 'MULTICAP', subtitlesecond: 'LONGTERM',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3Y CAGR", subthreesecond: "23.2%",
+                    subfourfirst: "TOTAL STOCKS", subfoursecond: "14 stocks",
+
+                    title: 'Dividend Titans',
+                },
+                {
+                    icon: require('@/assets/zebu-stocks/alphadynamic.svg'),
+                    subtitlefirst: 'MULTICAP', subtitlesecond: 'LONGTERM',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3Y CAGR", subthreesecond: "23.2%",
+                    subfourfirst: "TOTAL STOCKS", subfoursecond: "14 stocks",
+                    title: 'Wealth defenders',
+                },
+                {
+                    icon: require('@/assets/zebu-stocks/wealthdyanmic.svg'),
+                    subtitlefirst: 'MULTICAP', subtitlesecond: 'LONGTERM',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3Y CAGR", subthreesecond: "23.2%",
+                    subfourfirst: "TOTAL STOCKS", subfoursecond: "14 stocks",
+                    title: 'Alpha dynamic',
+                },
+            ],
+            Sectorcollections: [
+
+                {
+                    icon: require('@/assets/zebu-stocks/sector-stocks.png'),
+
+                    subtitlefirst: 'Multicap', subtitlesecond: 'longterm',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3y Cagr", subthreesecond: "23.2%",
+                    subfourfirst: "Total stocks", subfoursecond: "14 stocks",
+
+                    title: "Banking stocks",
+                    subtitle: "₹ 2,17,398.05",
+                    subtitleone: 1.94,
+                    subtitletwo: "1M CHANGE",
+                    subtitlethree: "7.2%",
+                    subtitlefour: "1Y CHANGE",
+                    subtitlefive: "7.2%",
+                },
+                {
+                    icon: require('@/assets/zebu-stocks/axiosbank.png'),
+
+                    subtitlefirst: 'Multicap', subtitlesecond: 'longterm',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3y Cagr", subthreesecond: "23.2%",
+                    subfourfirst: "Total stocks", subfoursecond: "14 stocks",
+
+                    title: "Pharma stocks",
+                    subtitle: "₹ 2,17,398.05",
+                    subtitleone: -1.23,
+                    subtitletwo: "1M CHANGE",
+                    subtitlethree: "7.2%",
+                    subtitlefour: "1Y CHANGE",
+                    subtitlefive: "7.2%",
+                },
+                {
+                    icon: require('@/assets/zebu-stocks/hdfcbank.png'),
+                    subtitlefirst: 'Multicap', subtitlesecond: 'longterm',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3y Cagr", subthreesecond: "23.2%",
+                    subfourfirst: "Total stocks", subfoursecond: "14 stocks",
+
+                    title: "IT stocks",
+                    subtitle: "₹ 2,17,398.05",
+                    subtitleone: 1.94,
+                    subtitletwo: "1m CHANGE",
+                    subtitlethree: "7.2%",
+                    subtitlefour: "1Y CHANGE",
+                    subtitlefive: "7.2%",
+                },
+                {
+                    icon: require('@/assets/zebu-stocks/sector-stocks.png'),
+
+                    subtitlefirst: 'Multicap', subtitlesecond: 'longterm',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3y Cagr", subthreesecond: "23.2%",
+                    subfourfirst: "Total stocks", subfoursecond: "14 stocks",
+
+                    title: "Banking stocks",
+                    subtitle: "₹ 2,17,398.05",
+                    subtitleone: -1.94,
+                    subtitletwo: "1M CHANGE",
+                    subtitlethree: "7.2%",
+                    subtitlefour: "1Y CHANGE",
+                    subtitlefive: "7.2%",
+                },
+                {
+                    icon: require('@/assets/zebu-stocks/sector-stocks.png'),
+
+                    subtitlefirst: 'Multicap', subtitlesecond: 'longterm',
+                    subsecfirst: "MIN.INVEST", subsecsecond: "₹ 45,324",
+                    subthreefirst: "3y Cagr", subthreesecond: "23.2%",
+                    subfourfirst: "Total stocks", subfoursecond: "14 stocks",
+
+                    title: "Banking stocks",
+                    subtitle: "₹ 2,17,398.05",
+                    subtitleone: -1.94,
+                    subtitletwo: "1M CHANGE",
+                    subtitlethree: "7.2%",
+                    subtitlefour: "1Y CHANGE",
+                    subtitlefive: "7.2%",
+                },
+
+                // {
+                //   icon: require('@/assets/zebu-stocks/axiosbank.png'),
+
+                // },
+                // {
+                //   icon: require('@/assets/zebu-stocks/kottak.png'),
+
+                // },
+            ],
+            stocksinnews: [
+                {
+                    title: "HDFC Bank proposes to raise Rs 50,000 crore funds via bonds over next 12 months",
+                    subtitle: "22 May, 2023",
+                    bank: "HDFC bank",
+
+                    subtitleone: "₹1,798.05",
+                    bulliesh: "Bullish",
+                    image: require('@/assets/zebu-stocks/arrowgreen.svg'),
+                },
+                {
+                    title: "State Bank of India to consider fund raising up to $2 billion on April 18",
+                    subtitle: "22 May, 2023",
+                    bank: "SBIN",
+                    subtitleone: "₹175.05",
+                    bulliesh: "Bullish",
+                    image: require('@/assets/zebu-stocks/arrowgreen.svg'),
+                },
+                {
+                    title: "Kotak Mahindra Bank may weigh heavier on MSCI as foreign holding dips to 41.22%",
+                    subtitle: "22 May, 2023",
+                    bank: "Kotak Bank",
+                    subtitleone: "₹2,347.05",
+                    bulliesh: "Bearish",
+                    image: require('@/assets/zebu-stocks/redarrow.svg'),
+                },
+                {
+                    title: "HDFC Bank proposes to raise Rs 50,000 crore funds via bonds over next 12 months",
+                    subtitle: "22 May, 2023",
+                    bank: "HDFC bank",
+
+                    subtitleone: "₹1,798.05",
+                    bulliesh: "Bullish",
+                    image: require('@/assets/zebu-stocks/arrowgreen.svg'),
+                },
+                {
+                    title: "Shapoorji Pallonji Group weighs $2 billion asset sales",
+                    subtitle: "22 May, 2023",
+                    bank: "SW Solar",
+                    subtitleone: "₹175.05",
+                    bulliesh: "Bullish",
+                    image: require('@/assets/zebu-stocks/arrowgreen.svg'),
+                },
+                {
+                    title: "ONGC bets on deepwater oil to offset imports",
+                    subtitle: "22 May, 2023",
+                    bank: "ONGC",
+                    subtitleone: "₹2,347.05",
+                    bulliesh: "Bearish",
+                    image: require('@/assets/zebu-stocks/redarrow.svg'),
+                },
+
+            ],
+        };
+    },
+    mounted() {
+        this.apitopindex();
+        this.topgainers();
+        this.toploosers();
+        this.stockrange();
+        this.mostactive();
+        var axiosthis = this
+        let configs = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: `${api}/getsectoradstock`,
+  headers: { }
+};
+
+axios.request(configs)
+.then((response) => {
+console.log("sector response",response)
+axiosthis.clientids=response.data
+console.log("zzzzzzz",100*(4/4))
+})
+.catch((error) => {
+  console.log(error);
+});
+    },
+    methods: {
+        // Api by DM
+        apitopindex() {
+            const axios = require('axios');
+            let config = {
+                method: 'post',
+                maxBodyLength: Infinity,
+                url: `${api}/getTopIndex`,
+                headers: {}
+            };
+            axios.request(config)
+                .then((response) => {
+                    console.log("asd", response.data);
+                    let data = response.data;
+                    data.sort((a, b) => {
+                        return a.sort - b.sort;
+                    });
+                    for (let i = 0; i < data.length; i++) {
+                        data[i]['ch'] = (data[i].lp - data[i].close)?.toFixed(2)
+                    }
+                    this.itemsss = data
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        },
+        topgainers() {
+            // const axios = require('axios');
+            let data = JSON.stringify({
+                "TopGainersLosers": "G",
+                "count": 20
+            });
+            let config = {
+                method: 'post',
+                maxBodyLength: Infinity,
+                url: `${api}/getTopGainersLosers`,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: data
+            };
+            axios.request(config)
+                .then((response) => {
+                    // console.log(JSON.stringify(response.data));
+                    let data = response.data
+                    console.log("gainer", data)
+                    for (let i = 0; i < data.length; i++) {
+                        data[i]['ch'] = (data[i].lp - data[i].close)?.toFixed(2)
+                    }
+                    this.gainer = data
+                    console.log("asd", this.gainer);
+                    // let data1 = data[0]
+                    // console.log(data1.Exchange)
+
+                    // for (let i = 0; i < data.length; i++) {
+
+                    // }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        },
+        toploosers() {
+            var axiosthis = this;
+            // const axios = require('axios');
+            let data = JSON.stringify({
+                "TopGainersLosers": "L",
+                "count": 20
+            });
+            let config = {
+                method: 'post',
+                maxBodyLength: Infinity,
+                url: `${api}/getTopGainersLosers`,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: data
+            };
+            axios.request(config)
+                .then((response) => {
+                    let data = response.data
+                    console.log("looser", data)
+                    for (let i = 0; i < data.length; i++) {
+                        data[i]['ch'] = (data[i].lp - data[i].close)?.toFixed(2)
+                    }
+                    axiosthis.loosers = data
+                    console.log("asds", axiosthis.loosers);
+
+                    // let data1 = data[0]
+                    // console.log(data1.Exchange)
+
+                    // for (let i = 0; i < data.length; i++) {
+
+                    // }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        },
+        mostactive() {
+            const axios = require('axios');
+            let data = JSON.stringify({
+                "MostActive": "Value",
+                "count": 20
+            });
+            let config = {
+                method: 'post',
+                maxBodyLength: Infinity,
+                url: `${api}/getMostActive`,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: data
+            };
+
+            axios.request(config)
+                .then((response) => {
+                    console.log(response.data);
+                    let data = response.data
+                    console.log("gain by value", data)
+                    for (let i = 0; i < data.length; i++) {
+                        data[i]['ch'] = (data[i].lp - data[i].close)?.toFixed(2)
+                    }
+                    this.gainvalue = data
+                    console.log("asdsd", this.gainvalue);
+                    // this.gainvalue = response.data
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
+        },
+        // ..............seo.................................................
+        stockrange() {
+            var axiosthis = this;
+
+            let config = {
+                method: 'post',
+                maxBodyLength: Infinity,
+                url: `${api}/getadstock`,
+                headers: {}
+            };
+
+            axios.request(config)
+                .then((response) => {
+                    //   console.log(JSON.stringify(response.data));
+                    console.log("response", response)
+                    axiosthis.valuestore = response.data
+                    console.log("valuestore", axiosthis.valuestore);
+
+                    axiosthis.totalvaluestore = axiosthis.valuestore.Negative + axiosthis.valuestore.Positive + axiosthis.valuestore.Neutral
+                    //  100*(426/1706)
+                    // axiosthis.Positivepercentage =100*(axiosthis.valuestore.Positive/axiosthis.totalvaluestore)
+                    //  console.log("Positivepercentage",typeof axiosthis.Positivepercentage);
+                    axiosthis.Negativepercentage = 100 * (axiosthis.valuestore.Negative / axiosthis.totalvaluestore)
+                    console.log("Negativepercentage", axiosthis.Negativepercentage);
+                    axiosthis.Neutralpercentage = 100 * (axiosthis.valuestore.Neutral / axiosthis.totalvaluestore)
+                    console.log("Neutralpercentage", axiosthis.Neutralpercentage);
+
+
+                    console.log("totalvaluestore", axiosthis.totalvaluestore)
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        },
+        SingleIndexpage(index) {
+            this.singleindex = true;
+            this.home = false;
+            this.index = index
+            console.log('Clicked card index:', this.index);
+            let selectgrid = this.itemsss[this.index]
+            this.selectgrid = selectgrid.idxname
+            console.log("gird name", this.selectgrid);
+        },
+        etfpage() {
+            this.etfpage = true
+            this.sigleindex = false
+        },
+        getTextColorClass(per) {
+            if (per > 0) {
+                return 'positive-color';
+            } else if (per < 0) {
+                return 'negative-color';
+            } else {
+                return '';
+            }
+        },
+        backtostockspge() {
+            this.home = true
+            this.sectors = false
+            this.indices = false
+
+        },
+        stockTosector() {
+            this.sectors = true
+            this.indices = false
+            this.home = false
+            // home: true,
+            // indices: false,
+            // sectors: false,
+        },
+        readmore() {
+            this.stocksinnews.push(this.stocksinnews[0])
+        },
+        backtopage() {
+            this.selectedTab = false
+        },
+        sssssssssss() {
+            this.ggggggggggg = this.gainer.length
+            this.hhdhdhhhdhh = false
+            this.iiiiiiii = true
+
+        },
+        Seemorestocksup() {
+            this.ggggggggggg = 6
+            this.hhdhdhhhdhh = true
+            this.iiiiiiii = false
+        },
+        selectItem(item) {
+            this.selectedItem = item
+        },
+        unSelectItem() {
+            this.selectedItem = false
+        },
+        indicesPage() {
+            this.indices = true;
+            this.home = false;
+        },
+    },
+    components: { AllIndices, SecTors, SingleIndex },
+}
+</script>
+<style lang="scss">
+
+
+.hhhhhhhhhhh {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.borderline {
+    border-left: 4px solid #0037B7 !important;
+}
+
+.toolbar-contant {
+    .v-toolbar__content {
+        padding-top: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        // height:59px !important;
+    }
+}
+
+.buttoncontant {
+    .v-btn__content {
+        justify-content: end !important;
+    }
+}
+
+.linear-gradiantcard {
+    background: linear-gradient(to right, #000000, #000000) !important;
+}
+
+.v-data-table-header {
+    background-color: #FAFBFF;
+}
+
+.postionchange {
+    position: absolute !important;
+    top: 25px !important;
+    left: 170px !important;
+    right: 200px
+}</style>

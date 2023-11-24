@@ -1,0 +1,1069 @@
+<template>
+    <div>
+        <v-row>
+            <v-col cols="9">
+                <div style="outline: 1px #DDDDDD solid;">
+                    <v-card color="#FAFBFF" class="elevation-0">
+                        <v-row>
+                            <v-col cols="1">
+                                <img class="pl-4 mt-2" src="@/assets/image 381.svg" />
+                            </v-col>
+                            <v-col cols="6">
+                                <div>
+                                    <p class="title font-weight-bold">
+                                        Nifty 50
+                                    </p>
+                                    <p class="caption mt-n4">Nifty 50 is a well diversified 50 stock index. It represents
+                                        the
+                                        top 50 Largecap companies based on market capitalisation.</p>
+                                </div>
+                            </v-col>
+                            <v-col cols="1">
+                            </v-col>
+                            <v-col cols="2" class="text-right">
+                                <p class="subtitle-1 font-weight-medium mt-2">
+                                    ₹ 18,392.60
+                                </p>
+                                <p class="subtitle-2 font-weight-medium mt-n5" style="color: red;">
+                                    -62.60 (0.34%)
+                                </p>
+                            </v-col>
+                            <v-col cols="2" class="text-center mt-2">
+                                <v-btn class="ma-1 mt-2" width="30px" height="30px" fab dark small elevation="0"
+                                    color="#EBEBED" outlined>
+                                    <v-icon size="17" color="#3E4763">
+                                        mdi-bell-outline
+                                    </v-icon>
+                                </v-btn>
+                                <v-btn class="ma-1 mt-2" width="30px" height="30px" fab dark small elevation="0"
+                                    color="#EBEBED" outlined>
+                                    <v-icon size="17" color="#3E4763">
+                                        mdi-bookmark-outline
+                                    </v-icon>
+                                </v-btn>
+                                <v-menu bottom left>
+                                    <template v-slot:activator="{ on, attrs }">
+                                        <v-btn dark class="ml-auto" icon v-bind="attrs" v-on="on">
+                                            <v-icon size="20" color="black">mdi-dots-vertical</v-icon>
+                                        </v-btn>
+                                    </template>
+
+                                    <v-list>
+                                        <v-list-item v-for="(item, i) in items" :key="i">
+                                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu>
+                            </v-col>
+                        </v-row>
+                    </v-card>
+                    <v-row>
+                        <v-col>
+                            <p class="title font-weight-bold ml-4 mt-4">Price Chart</p>
+                        </v-col>
+                        <v-col>
+                            <v-card class="elevation-0  ">
+                                <v-tabs align-with-title background-color="transparent" color="black">
+                                    <v-tab class="caption">1M</v-tab>
+                                    <v-tab class="caption">3M</v-tab>
+                                    <v-tab class="caption">6M</v-tab>
+                                    <v-tab class="caption">1YR</v-tab>
+                                    <v-tab class="caption">3YR</v-tab>
+                                    <v-tab class="caption">5YR</v-tab>
+                                    <v-tab class="caption">MAX</v-tab>
+                                </v-tabs>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                    <v-card class="elevation-0" style="border-bottom: #ebebeb 1px solid; border-top: #ebebeb 1px solid;">
+                        <v-row class="mb-7">
+                            <v-col cols="4" class="ml-4 mt-3">
+                                <v-row>
+                                    <v-col cols="6">
+                                        <p class="mb-0 pt-5 caption" style="color: #666666;">PE RATIO</p>
+                                        <p class="mb-0 mt-1 body-2 back--text font-weight-bold">22.86</p>
+                                        <v-divider class="mr-5 mt-2"></v-divider>
+                                    </v-col>
+                                    <v-col cols="6">
+                                        <p class="mb-0 pt-5 caption" style="color: #666666;">PB RATIO</p>
+                                        <p class="mb-0 mt-1 body-2 back--text font-weight-bold">22.86</p>
+                                        <v-divider class="mr-5 mt-2"></v-divider>
+                                    </v-col>
+                                </v-row>
+                                <div>
+                                    <p class="mb-0 pt-7 caption" style="color: #666666;">TOTAL TRADED VALUE</p>
+                                    <p class="mb-0 mt-1 body-2 back--text font-weight-bold">2,21,060</p>
+                                    <v-divider class="mr-5 mt-2"></v-divider>
+                                </div>
+                                <div>
+                                    <p class="mb-0 pt-7 caption" style="color: #666666;">HIGH - LOW</p>
+                                    <span class="mb-0 mt-1 body-2 back--text font-weight-bold">₹1,348.95 </span>
+                                    <span class="slidecontainerlist mx-2 mt-n4">
+                                        <!-- <input disabled type="range" min="item.l" max="item.h" v-model="item.lp" class="slider"> -->
+                                        <input type="range" min="50" max="2000" class="sliderlist">
+                                    </span>
+                                    <span class="mb-0 mt-1 body-2 back--text font-weight-bold"> ₹1,322.65</span>
+                                    <v-divider class="mr-5 mt-2"></v-divider>
+                                </div>
+                                <div>
+                                    <p class="mb-0 pt-7 caption" style="color: #666666;">52 WEEKS HIGH - 52 WEEKS LOW</p>
+                                    <span class="mb-0 mt-1 body-2 back--text font-weight-bold">₹1,438.80 </span>
+                                    <span class="slidecontainerlist mx-2 mt-n4">
+                                        <!-- <input disabled type="range" min="item.l" max="item.h" v-model="item.lp" class="slider"> -->
+                                        <input type="range" min="50" max="2000" class="sliderlist">
+                                    </span>
+                                    <span class="mb-0 mt-1 body-2 back--text font-weight-bold"> ₹ 1300.34</span>
+                                    <v-divider class="mr-5 mt-2"></v-divider>
+                                </div>
+                            </v-col>
+                            <v-col cols="6" class="mt-10 ml-n8">
+                                <img src="@/assets/image 379.svg">
+                            </v-col>
+                        </v-row>
+                    </v-card>
+                    <v-card class="elevation-0 mt-5 ">
+                        <div class="d-flex">
+                            <div>
+                                <span class="title font-weight-bold ml-3">ETFs tracking this Index</span>
+                            </div>
+                            <div class="ml-auto">
+                                <v-btn color="primary" class=" text-capitalize" text dense>See all 22 ETFs</v-btn>
+                            </div>
+                        </div>
+                        <v-row class="scrolldiv mt-7 ml-3 pr-3 pb-8" style="border-bottom: #ebebeb 1px solid;">
+                            <div class="" style="overflow: scroll;">
+                                <div style="display: inline-flex; overflow: hidden;">
+                                    <v-card width="220" v-for="datas in data" :key="datas.title" class="elevation-0 mr-4"
+                                        style="border: 1px solid rgb(190, 190, 190);">
+                                        <v-row class="">
+                                            <v-col>
+                                                <div class="d-flex">
+                                                    <div class="mt-3 ml-3 ">
+                                                        <p class="subtitle-1 font-weight-bold">{{ datas.title }}
+                                                        </p>
+                                                    </div>
+                                                    <div class="ml-auto mt-3 ml-3 mr-3">
+                                                    </div>
+                                                </div>
+                                            </v-col>
+                                        </v-row>
+                                        <v-row class="mt-n9 ml-1">
+                                            <v-col>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <p class="body-2 font-weight-medium"
+                                                            style="font-size: 11px; color: #acacac;">
+                                                            {{ datas.sub }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </v-col>
+                                        </v-row>
+                                        <v-row>
+                                            <v-col>
+                                                <v-divider :thickness="2" class="border-opacity-100 mt-n6 ml-5"
+                                                    color="black" width="40"></v-divider>
+                                            </v-col>
+                                        </v-row>
+                                        <v-row class="ml-1 mt-n8">
+                                            <v-col>
+                                                <div class="d-flex">
+                                                    <div class="flex-row">
+                                                        <p class="body-2 font-weight-bold">{{ datas.num }}</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="body-2 font-weight-bold" style="color: #43A833;">{{
+                                                            datas.num2
+                                                        }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </v-col>
+                                        </v-row>
+                                    </v-card>
+                                </div>
+                            </div>
+                        </v-row>
+                        <v-card class="mt-6 ml-3 elevation-0">
+                            <div class="d-flex">
+                                <div>
+                                    <p class="title font-weight-bold">Nifty F&O</p>
+                                    <p class="caption mt-n4">Live Nifty Futures & Options data</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <div class="d-flex flex-row mr-5" style="outline: 1px solid #DDDDDD;">
+                                        <v-card class="elevation-0" :ripple="false" @click="changeBackground(1)"
+                                            :class="{ 'gray-background': activeCard === 1 }">
+                                            <p class="pa-2 mb-0" style="font-size: 11px;">TOTALL CALL OI</p>
+                                            <p class="mt-n1 ml-5 mb-2 caption font-weight-bold">17,88,062</p>
+                                        </v-card>
+                                        <v-card class="elevation-0" :ripple="false" @click="changeBackground(2)"
+                                            :class="{ 'gray-background': activeCard === 2 }">
+                                            <p class="pa-2 mb-0" style="font-size: 11px;">PUT : CALL </p>
+                                            <p class="mt-n1 ml-5 mb-2 caption font-weight-bold">1.23</p>
+                                        </v-card>
+                                        <v-card class="elevation-0" :ripple="false" @click="changeBackground(3)"
+                                            :class="{ 'gray-background': activeCard === 3 }">
+                                            <p class="pa-2 mb-0" style="font-size: 11px;">TOTAL PUT OI</p>
+                                            <p class="mt-n1 ml-5 mb-2 caption font-weight-bold">17,88,062</p>
+                                        </v-card>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <v-row class="mt-8">
+                                <v-col cols="6">
+                                    <p class="body-2 font-weight-bold">Nifty 50 Futures</p>
+                                    <div v-for="datas in data1" :key="datas.title">
+                                        <v-row class="mt-n10">
+                                            <v-col cols="6" class="mt-8">
+                                                <p class="mt- caption font-weight-medium"> <v-chip class="mr-3 caption"
+                                                        label style="height: 18px; background-color: #e9e9e9;">
+                                                        <!-- <v-icon style="" >mdi-flag</v-icon> -->
+                                                        {{ datas.chip }}
+                                                    </v-chip>{{ datas.title }}</p>
+                                                <p style="color: #999999 !important;"
+                                                    class="caption ml-15 mt-n3 font-weight-medium">
+                                                    {{ datas.exp }}
+                                                    <span style="color: black;">{{ datas.day }}</span>
+                                                </p>
+                                            </v-col>
+                                            <v-col class="mt-" cols="6">
+                                                <div class="d-flex mt-7">
+                                                    <div class="flex-row pl-15 ml-6 ">
+                                                        <p class="caption font-weight-medium">{{ datas.price }}</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="caption font-weight-medium" style="color: #43A833;">{{
+                                                            datas.per }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex  mt-2">
+                                                    <div class="flex-row pl-15">
+                                                        <p style="color: #999999 !important;"
+                                                            class="caption mt-n4 font-weight-medium">OI
+                                                            <span style="color: black;">{{ datas.price2 }}</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mt-n4">
+
+                                                        <p class="caption font-weight-medium" style="color: #e72626;">{{
+                                                            datas.per2 }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </v-col>
+                                            <v-divider class="mr-5 mt-n4"></v-divider>
+                                        </v-row>
+                                    </div>
+                                    <v-card class="elevation-0 mt-0 text-center">
+                                        <v-btn color="primary" @click="showmore" class=" text-capitalize" text dense>Nifty
+                                            50
+                                            Futures</v-btn>
+                                    </v-card>
+                                </v-col>
+                                <v-col cols="6">
+                                    <p class="body-2 font-weight-bold">Nifty 50 Futures</p>
+                                    <div v-for="datas in data1" :key="datas.title">
+                                        <v-row class="mt-n10">
+                                            <v-col cols="6" class="mt-8">
+                                                <p class="mt- caption font-weight-medium"> <v-chip class="mr-3 caption"
+                                                        label style="height: 18px; background-color: #e9e9e9;">
+                                                        <!-- <v-icon style="" >mdi-flag</v-icon> -->
+                                                        {{ datas.chip }}
+                                                    </v-chip>{{ datas.title }}</p>
+                                                <p style="color: #999999 !important;"
+                                                    class="caption ml-15 mt-n3 font-weight-medium">
+                                                    {{ datas.exp }}
+                                                    <span style="color: black;">{{ datas.day }}</span>
+                                                </p>
+                                            </v-col>
+                                            <v-col class="mt-" cols="6">
+                                                <div class="d-flex mt-7">
+                                                    <div class="flex-row pl-15 ml-6">
+                                                        <p class="caption font-weight-medium">{{ datas.price }}</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="caption font-weight-medium" style="color: #43A833;">{{
+                                                            datas.per }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex  mt-2">
+                                                    <div class="flex-row pl-15">
+                                                        <p style="color: #999999 !important;"
+                                                            class="caption mt-n4 font-weight-medium">OI
+                                                            <span style="color: black;">{{ datas.price2 }}</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mt-n4">
+                                                        <p class="caption font-weight-medium" style="color: #e72626;">{{
+                                                            datas.per2 }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </v-col>
+                                            <v-divider class="mr-5 mt-n4"></v-divider>
+                                        </v-row>
+                                    </div>
+                                    <v-card class="elevation-0 mt-0 text-center">
+                                        <v-btn color="primary" @click="showmore" class=" text-capitalize" text dense>Nifty
+                                            50
+                                            option chain</v-btn>
+                                    </v-card>
+                                </v-col>
+                            </v-row>
+                        </v-card>
+                    </v-card>
+                </div>
+
+                <div>
+                    <p class="title font-weight-bold ml-3 mt-12">Nifty 50 companies</p>
+                </div>
+                <!-- ................................SEO................................... -->
+
+                <v-data-table hide-default-header :headers="mutualfundheaders" :items="mutualfunditems"
+                    :items-per-page="perpage" item-key="id" v-model="selectedRows" class="elevation-0 mt-6"
+                    hide-default-footer style="background-color:white; outline: 1px #DDDDDD solid;">
+
+                    <template v-slot:footer>
+                        <v-divider></v-divider>
+                        <div class="text-center" v-if="hhdhdhhhdhh">
+                            <v-btn text color="primary" dark class="ma-2 text-capitalize" @click="sssssssssss">
+                                More tax saving funds <v-icon color="black"> mdi-chevron-down</v-icon>
+                            </v-btn>
+                        </div>
+
+                        <div class="text-center" v-if="iiiiiiii">
+
+                            <v-btn text color="primary" dark class="ma-2 text-capitalize" @click="Seemorestocksup">
+                                More tax saving funds
+                                <v-icon color="black"> mdi-chevron-up</v-icon>
+                            </v-btn>
+                        </div>
+                    </template>
+                    <template v-slot:header>
+                        <tr class="" style="background-color: #FAFBFF;border: 1px solid red;">
+                            <th class="text-start"><span class="pl-4 pt-1 pb-1" style="color:#666666 ;font-size: 13px">Fund
+                                    Scrips</span></th>
+                            <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                    style="color:#666666 ;font-size: 13px">Sector</span></th>
+                            <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                    style="color:#666666 ;font-size: 13px">Weight%</span></th>
+                            <th class="text-start"><span class="pl-2 pt-1 pb-1" style="color:#666666 ;font-size: 13px">Mkt
+                                    cap (cr)</span></th>
+                            <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                    style="color:#666666 ;font-size: 13px">Volume (k)</span></th>
+                            <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                    style="color:#666666 ;font-size: 13px">Price</span></th>
+                            <th class="text-start"><span class="pl-4 pt-1 pb-1"
+                                    style="color:#666666 ;font-size: 13px">%Chg</span></th>
+                            <th><v-menu transition="slide-x-transition" bottom right>
+                                    <template v-slot:activator="{ on, attrs }">
+                                        <v-btn dark class="ml-auto" icon v-bind="attrs" v-on="on">
+                                            <v-icon size="20" color="black">mdi-dots-vertical</v-icon>
+                                        </v-btn>
+                                    </template>
+
+                                    <v-list>
+                                        <v-list-item v-for="(item, i) in items" :key="i">
+                                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu></th>
+
+                        </tr>
+
+
+                    </template>
+
+                    <template v-slot:item="{ item }">
+
+
+                        <tr class="" style="background-color: ;position: relative;" @mouseover="selectItem(item)"
+                            @mouseleave="unSelectItem(item)">
+
+                            <td class="font-weight-bold pb-4 pt-2" style="color: #000000;font-size: 13px;width:315px;">
+                                <!-- <div class="" > -->
+                                <p class="" style="width: 195px;"> {{ item.Fundname }}</p>
+
+                                <div class="display-flex row pt-1 pb-1">
+                                    <v-card v-if="item.NEWS == 'NEWS'" height="20px" width="56px"
+                                        class="pl-2 pr-2 pb-1 ml-2" elevation="0" color="#F1F3F8">
+                                        <p class="font-weight-medium mb-0 "
+                                            style="color:#666666;font-size:11px;margin-top: 3px;">
+                                            {{ item.NEWS }}</p>
+                                    </v-card>
+
+
+                                    <v-card v-if="item.ALERT == 'ALERT'" height="20px" width="56px"
+                                        class="pl-2 pr-2 pb-1 ml-2" elevation="0" color="#F1F3F8">
+                                        <p class="font-weight-medium mb-0 "
+                                            style="color:#666666;font-size:11px;margin-top: 3px;">
+                                            {{ item.ALERT }}</p>
+                                    </v-card>
+
+                                    <v-card v-if="item.EVENT == 'EVENT'" height="20px" width="56px"
+                                        class="pl-2 pr-2 pb-1 ml-2" elevation="0" color="#F1F3F8">
+                                        <p class="font-weight-medium mb-0 "
+                                            style="color:#666666;font-size:11px;margin-top: 3px;">
+                                            {{ item.EVENT }}</p>
+                                    </v-card>
+                                </div>
+                                <div class="postionchange" v-if="item === selectedItem">
+                                    <div class="display-flex row ">
+                                        <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                            style="min-width:23px;border-radius: 4px;" color="#43A833">B</v-btn>
+                                        <v-btn class="pa-0 elevation-0 ml-1 white--text" dense small
+                                            style="min-width:23px;border-radius: 4px;" color="#FF1717">S</v-btn>
+                                        <v-btn class="pa-0  elevation-0 ml-1" outlined dense small
+                                            style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;"><img alt=""
+                                                class="shrink " :src="require('@/assets/tradingsymbol.svg')"
+                                                width="15px" /></v-btn>
+                                        <v-btn class="ml-1 pa-0  elevation-0" outlined small
+                                            style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;"
+                                            color="#43A833">
+                                            <img alt="" class="shrink " :src="require('@/assets/tradinnote.svg')"
+                                                width="12px" /></v-btn>
+                                        <v-btn class="ml-1 pa-0 elevation-0 " outlined dense small
+                                            style="min-width:23px;border-radius: 4px;border:1px solid #CCCCCC;"> <v-icon
+                                                color="#666666" size="20">mdi-dots-horizontal</v-icon></v-btn>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </td>
+                            <td class=" pr-0"> <span class="font-weight-medium" style="font-size:13px;color:#000000">{{
+                                item.AUMval }}</span></td>
+                            <td><span class="font-weight-medium" style="font-size:13px;color:#000000">{{ item.TERval
+                            }}</span>
+                            </td>
+                            <td class="pr-0 pl-2"><span class="font-weight-medium" style="font-size:13px;color:#000000">{{
+                                item.MinInvest }}</span></td>
+
+                            <td class="pr-0"><span class="font-weight-medium" style=" font-size: 13px;">{{ item.oneyearCAGR
+                            }}
+                                    %</span></td>
+
+                            <td>
+                                <span class="font-weight-medium" style=" font-size: 13px;">{{ item.price }} %</span>
+                            </td>
+
+
+
+
+                            <td class="pr-0 " v-if="item.threeyrCAGR > 0">
+                                <span class="text-wrap font-weight-medium ml-"
+                                    style="color:#43A833 !important;font-size: 13px;">{{ item.threeyrCAGR }} %</span>
+                            </td>
+                            <td class="pr-0" v-else><span class="font-weight-medium"
+                                    style="color:red !important; font-size: 13px;">{{ item.threeyrCAGR }} %</span></td>
+
+                            <td>
+
+                            </td>
+
+                        </tr>
+                    </template>
+
+                </v-data-table>
+                <v-card v-if="showmore2" class="elevation-0 mt-0 text-center" style="outline: 1px solid #e7e7e7;">
+                    <v-btn color="primary" @click="showmore" class=" text-capitalize" text dense>See More sectors</v-btn>
+                </v-card>
+                <v-card v-if="showmore23" class="elevation-0 mt-0 text-center" style="outline: 1px solid #e7e7e7;">
+                    <v-btn color="primary" @click="showmore1" class=" text-capitalize" text dense>See Less sectors</v-btn>
+                </v-card>
+
+                <!-- ................................SEO................................... -->
+
+            </v-col>
+            <v-col class="" cols="3">
+                <div class="d-flex">
+                    <p class="XXXXXXXXXXsubtitle-1 font-weight-bold">Top NIFTY 50 Options</p>
+                    <v-menu bottom left>
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-btn dark class="ml-auto" icon v-bind="attrs" v-on="on">
+                                <v-icon size="20" color="black">mdi-dots-vertical</v-icon>
+                            </v-btn>
+                        </template>
+
+                        <v-list>
+                            <v-list-item v-for="(item, i) in items" :key="i">
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                    <!-- <v-icon class="ml-auto mt-n3">mdi-dots-vertical</v-icon> -->
+                </div>
+                <div v-for="datas in data2" :key="datas.title">
+                    <div class="d-flex mt-3">
+
+                        <div>
+                            <v-chip class=" caption" label style="height: 18px; background-color: #F1F3F8;">
+                                <!-- <v-icon style="" >mdi-flag</v-icon> -->
+                                {{ datas.chip }}
+                            </v-chip>
+                        </div>
+
+                        <div class=" mt-1 ml-2">
+                            <p class="body-2 font-weight-medium">{{ datas.title }}</p>
+                        </div>
+                        <div class="ml-auto mt-1">
+                            <p class="caption font-weight-medium">{{ datas.price }}
+
+
+
+                                <span v-if="datas.per > 0" style="color: #43A833;" class="font-weight-medium">( {{
+                                    datas.per }} % )
+                                </span>
+                                <span v-if="datas.per < 0" style="color: #e72626;" class="font-weight-medium">( {{
+                                    datas.per }} % )
+                                </span>
+
+
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <v-divider class=" "></v-divider>
+                </div>
+                <div class="text-center">
+                    <v-btn color="primary" class=" text-capitalize" text dense>Option chain</v-btn>
+                    <v-divider class=" "></v-divider>
+
+                </div>
+
+
+            </v-col>
+        </v-row>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            selectedItem: false,
+            showmore2: true,
+            showmore23: false,
+            perpage: 8,
+            activeCard: 2,
+            data: [
+                {
+                    title: "Nippon India ETF Nifty BeES",
+                    sub: "NIFTYBEES",
+                    num: "201.08",
+                    num2: "+0.19%s",
+                },
+                {
+                    title: "ICICI Prudential Nifty ETF",
+                    sub: "ICICINIFTY",
+                    num: "201.08",
+                    num2: "+0.19%s",
+                },
+                {
+                    title: "Mirae Asset Nifty 50 ETF",
+                    sub: "MAN50ETF",
+                    num: "201.08",
+                    num2: "+0.19%s",
+                },
+                {
+                    title: "UTI-Nifty Exchange Traded Fund",
+                    sub: "UTINIFTETF",
+                    num: "201.08",
+                    num2: "+0.19%s",
+                },
+                {
+                    title: "HDFC Nifty 50",
+                    sub: "HDFCNIFETF",
+                    num: "201.08",
+                    num2: "+0.19%s",
+                },
+                {
+                    title: "UTI-Nifty Exchange Traded Fund",
+                    sub: "UTINIFTETF",
+                    num: "201.08",
+                    num2: "+0.19%s",
+                },
+
+            ],
+            data1: [
+                {
+                    title: "NIFTY 25 MAY FUT",
+                    chip: "FUT",
+                    exp: "Expiry",
+                    day: "May 25",
+                    price: "₹236.05",
+                    per: "(+1.65%)",
+                    price2: "17,47,578",
+                    per2: "(+1.65%)"
+                },
+                {
+                    title: "NIFTY 25 MAY FUT",
+                    chip: "FUT",
+                    exp: "Expiry",
+                    day: "May 25",
+                    price: "₹236.05",
+                    per: "(+1.65%)",
+                    price2: "17,47,578",
+                    per2: "(+1.65%)"
+                },
+                {
+                    title: "NIFTY 25 MAY FUT",
+                    chip: "FUT",
+                    exp: "Expiry",
+                    day: "May 25",
+                    price: "₹236.05",
+                    per: "(+1.65%)",
+                    price2: "17,47,578",
+                    per2: "(+1.65%)"
+                },
+                {
+                    title: "NIFTY 25 MAY FUT",
+                    chip: "FUT",
+                    exp: "Expiry",
+                    day: "May 25",
+                    price: "₹236.05",
+                    per: "(+1.65%)",
+                    price2: "17,47,578",
+                    per2: "(+1.65%)"
+                },
+                {
+                    title: "NIFTY 25 MAY FUT",
+                    chip: "FUT",
+                    exp: "Expiry",
+                    day: "May 25",
+                    price: "₹236.05",
+                    per: "(+1.65%)",
+                    price2: "17,47,578",
+                    per2: "(+1.65%)"
+                },
+
+
+            ],
+            data2: [
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: -1.65,
+                },
+                {
+                    chip: "PUT",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: -1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "PUT",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: -1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: -1.65,
+                },
+                {
+                    chip: "PUT",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: -1.65,
+                },
+                {
+                    chip: "CALL",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: +1.65,
+                },
+                {
+                    chip: "PUT",
+                    title: "Nifty 18400",
+                    price: "₹236.05",
+                    per: -1.65,
+                },
+
+            ],
+            items: [
+                { title: 'Click Me' },
+                { title: 'Click Me' },
+                { title: 'Click Me' },
+                { title: 'Click Me 2' },
+            ],
+
+
+            //  ................................SEO...................................
+            mutualfundheaders: [
+                {
+                    text: "Scrips",
+                    align: "left",
+                    sortable: false,
+                    value: "Fundname", class: "successScrips"
+                },
+                { text: "Sector", sortable: false, value: "calories", class: "successtitle" },
+                { text: "Weight%", sortable: false, value: "calories", class: "successvolume" },
+                { text: "Mkt cap (cr)", sortable: false, value: "carbs", class: "successprice" },
+                { text: "Volume (k)", sortable: false, value: "protein", class: "successchg" },
+                { text: "Price", sortable: false, value: "iron", class: "successma" },
+                { text: "%Chg", sortable: false, value: "iron", class: "successma" },
+
+            ],
+            mutualfunditems: [
+                {
+                    id: 1,
+                    Fundname: "Reliance industries",
+                    AUMval: "Oil & Gas",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    price: "₹236.05",
+                    ALERT: "ALERT",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 2,
+                    Fundname: "HCL Technologies",
+                    AUMval: "IT services",
+                    price: "₹236.05",
+
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: -1.65,
+                    NEWS: "NEWS",
+
+                },
+                {
+                    id: 3,
+                    Fundname: "Tata Motors",
+                    AUMval: "Autos",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    price: "₹236.05",
+
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT"
+
+                },
+                {
+                    id: 4,
+                    Fundname: "HDFC bank",
+                    AUMval: "Telecom",
+                    price: "₹236.05",
+
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: -1.65,
+                    ALERT: "ALERT",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 5,
+                    Fundname: "Delhivery",
+                    AUMval: "Banks",
+                    TERval: "10.63%",
+                    price: "₹236.05",
+
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+
+                },
+                {
+                    id: 6,
+                    Fundname: "Laurus Labs",
+                    AUMval: "Logistics",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    price: "₹236.05",
+
+                    NEWS: "NEWS",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 6,
+                    Fundname: "Indian Hotels",
+                    AUMval: "Oil & Gas",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: -1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT",
+                    price: "₹236.05",
+
+                },
+                {
+                    id: 6,
+                    Fundname: "HDFC bank",
+                    AUMval: "Hospitality",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT",
+                    price: "₹236.05",
+
+                },
+                {
+                    id: 6,
+                    Fundname: "Delhivery",
+                    AUMval: "Oil & Gas",
+                    TERval: "10.63%",
+                    price: "₹236.05",
+
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                },
+                {
+                    id: 6,
+                    Fundname: "Laurus Labs",
+                    AUMval: "Healthcare",
+                    TERval: "10.63%",
+                    price: "₹236.05",
+
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 6,
+                    Fundname: "Indian Hotels",
+                    AUMval: "IT services",
+                    TERval: "10.63%",
+                    price: "₹236.05",
+
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: -1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 6,
+                    Fundname: "Indian Hotels",
+                    AUMval: "Autos",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    price: "₹236.05",
+
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                },
+                {
+                    id: 7,
+                    Fundname: "Delhivery",
+                    AUMval: "Telecom",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    price: "₹236.05",
+
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT"
+
+                },
+                {
+                    id: 8,
+                    Fundname: "Indian Hotels",
+                    AUMval: "Banks",
+                    price: "₹236.05",
+
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    ALERT: "ALERT",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 9,
+                    Fundname: "Reliance industries",
+                    AUMval: "Logistics",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    price: "₹236.05",
+
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                    ALERT: "ALERT",
+                },
+                {
+                    id: 10,
+                    Fundname: "Laurus Labs",
+                    AUMval: "Healthcare",
+                    TERval: "10.63%",
+                    price: "₹236.05",
+
+
+                    MinInvest: "₹29,534 ",
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: +1.65,
+                    NEWS: "NEWS",
+                    EVENT: "EVENT"
+                },
+                {
+                    id: 11,
+                    Fundname: "HCL Technologies",
+                    AUMval: "Hospitality",
+                    TERval: "10.63%",
+                    MinInvest: "₹29,534 ",
+                    price: "₹236.05",
+
+                    oneyearCAGR: "14,968 k",
+                    threeyrCAGR: -1.65,
+                    ALERT: "ALERT",
+                    EVENT: "EVENT"
+                },
+
+
+            ],
+            //  ................................SEO...................................
+
+        }
+    },
+    methods: {
+        selectItem(item) {
+            this.selectedItem = item
+        },
+        unSelectItem() {
+            this.selectedItem = false
+        },
+        showmore() {
+            this.perpage = this.mutualfunditems.length
+            this.showmore2 = !this.showmore2
+            this.showmore23 = !this.showmore23
+        },
+        showmore1() {
+            this.perpage = 8
+            this.showmore2 = !this.showmore2
+            this.showmore23 = !this.showmore23
+        },
+        changeBackground(cardNumber) {
+            this.activeCard = cardNumber;
+        },
+    }
+}
+</script>
+
+<style>
+.slidecontainer {
+    width: 60%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 3px;
+    background: #a3a3a3;
+    /* border: 2px solid rgba(222, 226, 235, 1); */
+    /* border-radius: 12px; */
+    /* outline: none; */
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slidecontainerlist {
+    width: 60%;
+}
+
+.sliderlist {
+    -webkit-appearance: none;
+    width: 33%;
+    height: 3px;
+    background: #a3a3a3;
+    /* border: 2px solid rgba(222, 226, 235, 1); */
+    /* border-radius: 12px; */
+    /* outline: none; */
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderlist::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    /* background: linear-gradient(0deg, #5c92f7, #4c80e2),
+    linear-gradient(0deg, #BDD0F4, #dce8ff); */
+    border-radius: 12px;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0)
+}
+
+.scrolldiv {
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+
+.postionchange {
+    position: absolute !important;
+    top: 25px !important;
+    left: 170px !important;
+    right: 200px
+}
+
+.gray-background {
+    background-color: #CCCCCC;
+    transition: background-color 0.5s ease-in-out;
+}
+</style>
+

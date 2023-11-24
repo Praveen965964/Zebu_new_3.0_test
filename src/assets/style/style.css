@@ -1,0 +1,333 @@
+/* stocks page start */
+.fw-559 {
+    font-weight: 600 !important;
+}
+.fs-9 {
+    font-size:9px !important;
+}
+.fs-10 {
+    font-size:10px !important;
+}
+.fs-11 {
+    font-size:11px !important;
+}
+.fs-12 {
+    font-size:12px !important;
+}
+.fs-13 {
+    font-size:13px !important;
+}
+.fs-14 {
+    font-size:14px !important;
+}
+.fs-16 {
+    font-size: 16px !important;
+}
+.fs-18 {
+    font-size: 18px !important;
+}
+.fs-20 {
+    font-size: 20px !important;
+}
+.fs-24 {
+    font-size: 24px !important;
+}
+.fs-36 {
+    font-size:36px !important;
+}
+
+.backColorWhite {
+    background-color: white !important 
+}
+.backColorF1F3 {
+    background-color: #F1F3F8 !important;
+}
+
+.text-BlackColor {
+color:#000 !important;    
+}
+.text-WhiteColor {
+    color:#FFF !important;
+}
+.text-GreenColor {
+    color: #43A833 !important;
+}
+.text-RedColor {
+    color: #FF1717 !important;
+}
+.text-666Color {
+    color: #666 !important;
+}
+.text-999Color {
+    color: #999 !important;
+}
+.text-blueColor {
+    color:#0037B7 !important;
+}
+.text-Color3E4 {
+    color:#3E4763 !important;
+}
+.text-Color506D84 {
+    color:#506D84 !important;
+}
+.text-Color148564 {
+    color:#148564 !important;
+}
+.text-Color515559 {
+    color:#515559 !important;
+}
+.text-ColorD34645{
+    color:#D34645 !important;  
+}
+.Lh-12 {
+    line-height: 12px !important;
+}
+.Lh-14 {
+    line-height: 14px !important;
+}
+.Lh-16 {
+    line-height: 16px !important;
+}
+.Lh-18 {
+    line-height: 18px !important;
+}
+.Lh-20 {
+    line-height: 20px !important;
+}
+.Lh-24 {
+    line-height: 24px !important;
+}
+.Lh-32 {
+    line-height: 32px !important;
+}
+
+.Ls-1 {
+    letter-spacing: -0.72px !important;
+}
+.Ls-1-32 {
+letter-spacing: 1.32px !important;
+}
+.Ls-0 {
+    letter-spacing: 0.14px !important;
+}
+.Ls-0-24 {
+    letter-spacing: -0.24px !important;
+}
+.Ls-0-28 {
+    letter-spacing: -0.28px !important;
+}
+.Ls-032 {
+    letter-spacing: -0.32px !important;
+}
+.Ls-036 {
+    letter-spacing: -0.36px !important;
+}
+.Ls-0_4 {
+    letter-spacing: -0.4px !important;
+}
+.Ls-0_06 {
+    letter-spacing: -0.06px !important;
+}
+.Ls-0_72 {
+    letter-spacing: -0.72px !important;
+}
+.Ls-0_48 {
+    letter-spacing: -0.48px !important;
+}
+.Ls-0-8 {
+    letter-spacing:  0.8px !important;
+}
+.Ls-0-9 {
+    letter-spacing:  0.9px !important;
+}
+.Ls-0-72 {
+letter-spacing: 0.72px !important;
+}
+.brd-4 {
+    border-radius: 4px !important;
+}
+.brd-16 {
+    border-radius: 16px !important;
+}
+.brd-32 {
+    border-radius: 32px !important;
+}
+.brd-24 { 
+    border-radius: 24px !important;
+}
+
+.border1Top {
+    border-top: 1px solid #DDD !important;
+}
+.border1 {
+    border: 1px solid #DDD !important;
+}
+.border1pxBlack {
+    border: 1px solid #000 !important;
+}
+.border2 {
+    border: 1px solid #CCC !important;
+}
+.borderIdthcus {
+    border-width: 0px 0px 0px 0px;
+}
+
+.border1Divider {
+    border: 1px solid #F3F3F3 !important;
+}
+
+.OverfLowscroll{
+    overflow-x: scroll !important;
+}
+.opc-08 {
+    opacity: 0.8 !important;
+}
+
+.ChartMenuCustam {
+    min-width: 20px !important;
+    height:20px !important ;
+    border-radius: 4px !important;  
+    border:1px solid #CCCCCC !important;
+    background-color:white !important;
+
+}
+.TableHeaderFntColor {
+    color: #666 !important; 
+font-size: 13px !important; 
+font-weight: 500 !important; 
+line-height: 16px !important; 
+}
+.TextfiledHeightCus {
+max-width:216px !important;
+}
+.CursorPointerEnable {
+    cursor: pointer !important;
+}
+.cardBoxShadLInearGradi{
+    background: linear-gradient(270deg, #FFF 77.04%, #F6F6F6 115%), #FFF !important;
+    box-shadow: 0px 38.5185px 25.4815px 0px rgba(83, 30, 0, 0.04), 0px 20px 13px 0px rgba(83, 30, 0, 0.04), 0px 8.14815px 6.51852px 0px rgba(83, 30, 0, 0.03), 0px 1.85185px 3.14815px 0px rgba(83, 30, 0, 0.02) !important;
+}
+ .paddingTopcustom2px{
+    padding-top: 1px !important;;
+ }
+.LabelclassCustom {
+    padding-top:2px !important;
+    color: #000 !important;
+    font-size: 14px !important;
+    font-weight: 469 !important;
+    line-height: 16px !important;
+  }
+
+.MinHeightcus {
+    min-height: 30px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tittlelarge {
+    color:#000000 !important;
+    line-height:31px !important;
+    letter-spacing: -1.5px !important;
+    font-weight:599 !important;
+    font-size: 35px !important;
+}
+.btnfontsize  {
+color: #FFF !important;
+font-size: 13px !important;
+/* 559 */
+font-weight: 469 !important;
+line-height: 20px !important;
+letter-spacing: -0.28px !important;
+}
+.simpleinsightfullcard {
+    z-index: 1 !important;
+    border-radius: 16px !important;
+    width: 172px !important;
+     box-shadow: 0px 1.85185px 3.14815px rgba(83, 30, 0, 0.02), 0px 8.14815px 6.51852px rgba(83, 30, 0, 0.03), 0px 20px 13px rgba(83, 30, 0, 0.04), 0px 38.5185px 25.4815px rgba(83, 30, 0, 0.04) !important;
+}
+.buystocks {
+    color: #000 !important;
+font-size: 15px !important;
+font-weight: 659 !important;
+line-height: 16px !important; 
+letter-spacing: -0.32px !important;
+}
+.fontsize20 {
+    color: #000 !important;
+    font-size: 19px !important;
+    font-weight: 659 !important;
+    line-height: 19px !important;
+    letter-spacing: -0.4px !important;
+} 
+.fontsize14b {
+    color: #000 !important;
+font-size: 13px !important;
+font-weight: 659 !important;
+line-height: 16px !important;
+}
+.fontsize14g {
+    color: #666 !important;font-size: 13px !important;font-weight: 469 !important;line-height: 16px !important; 
+}
+.fontsize15{
+    color: #000 !important;font-size: 15px !important;font-weight: 619 !important;line-height: 16px !important;letter-spacing: -0.32px !important;
+}
+.fontsize12grey {
+color:#666666 !important;font-size: 12px !important;font-weight:469 !important; line-height:16px !important;
+}
+.fontsize12green {
+color:#43A833 !important;font-size: 12px !important;font-weight:469 !important; line-height:16px !important;
+}
+.tabfonts {
+    font-size: 14px !;font-weight:559 !important;line-height:16px !important;letter-spacing:-0.4px !important;
+}
+.seemorelessfontsize {
+    color: #0037B7 !important;font-size: 14px !important;font-weight:559 !important;line-height:16px !important;letter-spacing:0px !important;
+}
+.fontsize24 {
+    font-size: 24px !important; color:#000000 !important;font-weight:559 !important;line-height:24px !important;letter-spacing: -1.25px !important;
+}
+.fontsize14b559w {
+    font-size: 14px !important; color:#000000 !important;font-weight:559 !important;line-height:16px !important;letter-spacing:0px !important;
+}
+.fontsize14G559w {
+    font-size: 14px !important; color:#666666 !important;font-weight:559 !important;line-height:16px !important;letter-spacing:0px !important;
+}
+.fontsize1G659w {
+    font-weight:659 !important;color:#000000 !important;font-size:16px !important;line-height:16px !important;
+}
+/* .multicapfontsize {
+    letter-spacing:1px !important;color:#666666 !important;font-size:9px !important;font-weight:469 !important;line-height:12px !important;
+} */
+
+/* stocks page end */
+
+
+
+
+
+
+
+
+
